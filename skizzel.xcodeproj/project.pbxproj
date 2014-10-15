@@ -13,6 +13,27 @@
 		A30757E919E568DB00780C45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30757E819E568DB00780C45 /* Images.xcassets */; };
 		A30757EC19E568DB00780C45 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A30757EA19E568DB00780C45 /* LaunchScreen.xib */; };
 		A30757F819E568DB00780C45 /* skizzelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30757F719E568DB00780C45 /* skizzelTests.swift */; };
+		A307580219E568F500780C45 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A307580119E568F500780C45 /* config.plist */; };
+		A307580619E5695500780C45 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307580519E5695500780C45 /* Utils.swift */; };
+		A307581219E5724E00780C45 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307581119E5724E00780C45 /* APIController.swift */; };
+		A307581C19E5735000780C45 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A307581919E572F200780C45 /* Alamofire.framework */; };
+		A307581E19E5737C00780C45 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A307581919E572F200780C45 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A307582219E57BDF00780C45 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = A307582119E57BDF00780C45 /* button.png */; };
+		A307582419E57C0700780C45 /* register.png in Resources */ = {isa = PBXBuildFile; fileRef = A307582319E57C0700780C45 /* register.png */; };
+		A307582619E57FAB00780C45 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A307582519E57FAB00780C45 /* logo.png */; };
+		A30C768819E678D500212B35 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C768719E678D500212B35 /* UserModel.swift */; };
+		A30C768B19E6AE0200212B35 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C768A19E6AE0200212B35 /* MainViewController.swift */; };
+		A30C768F19E6B58200212B35 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C768E19E6B58200212B35 /* RegisterViewController.swift */; };
+		A31D9A7619EE50EB0058C6DC /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31D9A7519EE50EB0058C6DC /* CategoriesModel.swift */; };
+		A37E86B919E6CD70004A8C0F /* MainViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E86B819E6CD70004A8C0F /* MainViewTableViewCell.swift */; };
+		A37E86BB19E6CE28004A8C0F /* ReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E86BA19E6CE28004A8C0F /* ReceiptModel.swift */; };
+		A3A5475C19ED59AB00D884FC /* AddReceiptTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A5475B19ED59AB00D884FC /* AddReceiptTableViewController.swift */; };
+		A3C49E0E19E965D100F1F2CB /* ReceiptImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C49E0D19E965D100F1F2CB /* ReceiptImageModel.swift */; };
+		A3C49E1419E96B4700F1F2CB /* ReceiptImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C49E1319E96B4700F1F2CB /* ReceiptImagesViewController.swift */; };
+		A3C49E1619E96C1C00F1F2CB /* ReceiptImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C49E1519E96C1C00F1F2CB /* ReceiptImagesCollectionViewCell.swift */; };
+		A3C6D4C119EEA2B8009BAF1E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C6D4BF19EEA2B8009BAF1E /* UIColor.swift */; };
+		A3C6D4C219EEA2B8009BAF1E /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C6D4C019EEA2B8009BAF1E /* ViewControllerUtils.swift */; };
+		A3C7B10719EBC60800F2B3FD /* ReceiptImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C7B10619EBC60800F2B3FD /* ReceiptImageDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +44,35 @@
 			remoteGlobalIDString = A30757DB19E568DB00780C45;
 			remoteInfo = skizzel;
 		};
+		A307581819E572F200780C45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A307581319E572F200780C45 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		A307581A19E572F200780C45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A307581319E572F200780C45 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A307581D19E5735E00780C45 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A307581E19E5737C00780C45 /* Alamofire.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A30757DC19E568DB00780C45 /* skizzel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = skizzel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +85,26 @@
 		A30757F119E568DB00780C45 /* skizzelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = skizzelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30757F619E568DB00780C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A30757F719E568DB00780C45 /* skizzelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skizzelTests.swift; sourceTree = "<group>"; };
+		A307580119E568F500780C45 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		A307580519E5695500780C45 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A307581119E5724E00780C45 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		A307581319E572F200780C45 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../../../../Downloads/Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
+		A307582119E57BDF00780C45 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		A307582319E57C0700780C45 /* register.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register.png; sourceTree = "<group>"; };
+		A307582519E57FAB00780C45 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		A30C768719E678D500212B35 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		A30C768A19E6AE0200212B35 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A30C768E19E6B58200212B35 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A31D9A7519EE50EB0058C6DC /* CategoriesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
+		A37E86B819E6CD70004A8C0F /* MainViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCell.swift; sourceTree = "<group>"; };
+		A37E86BA19E6CE28004A8C0F /* ReceiptModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptModel.swift; sourceTree = "<group>"; };
+		A3A5475B19ED59AB00D884FC /* AddReceiptTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReceiptTableViewController.swift; sourceTree = "<group>"; };
+		A3C49E0D19E965D100F1F2CB /* ReceiptImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptImageModel.swift; sourceTree = "<group>"; };
+		A3C49E1319E96B4700F1F2CB /* ReceiptImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptImagesViewController.swift; sourceTree = "<group>"; };
+		A3C49E1519E96C1C00F1F2CB /* ReceiptImagesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptImagesCollectionViewCell.swift; sourceTree = "<group>"; };
+		A3C6D4BF19EEA2B8009BAF1E /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		A3C6D4C019EEA2B8009BAF1E /* ViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
+		A3C7B10619EBC60800F2B3FD /* ReceiptImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptImageDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A307581C19E5735000780C45 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +129,7 @@
 		A30757D319E568DB00780C45 = {
 			isa = PBXGroup;
 			children = (
+				A307581319E572F200780C45 /* Alamofire.xcodeproj */,
 				A30757DE19E568DB00780C45 /* skizzel */,
 				A30757F419E568DB00780C45 /* skizzelTests */,
 				A30757DD19E568DB00780C45 /* Products */,
@@ -77,8 +148,12 @@
 		A30757DE19E568DB00780C45 /* skizzel */ = {
 			isa = PBXGroup;
 			children = (
+				A307581119E5724E00780C45 /* APIController.swift */,
 				A30757E119E568DB00780C45 /* AppDelegate.swift */,
-				A30757E319E568DB00780C45 /* ViewController.swift */,
+				A37E86B519E6CD42004A8C0F /* cells */,
+				A30C768619E678BD00212B35 /* models */,
+				A307580719E5696500780C45 /* controllers */,
+				A307580419E5693400780C45 /* utils */,
 				A30757E519E568DB00780C45 /* Main.storyboard */,
 				A30757E819E568DB00780C45 /* Images.xcassets */,
 				A30757EA19E568DB00780C45 /* LaunchScreen.xib */,
@@ -90,7 +165,11 @@
 		A30757DF19E568DB00780C45 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A307582519E57FAB00780C45 /* logo.png */,
+				A307582319E57C0700780C45 /* register.png */,
+				A307582119E57BDF00780C45 /* button.png */,
 				A30757E019E568DB00780C45 /* Info.plist */,
+				A307580119E568F500780C45 /* config.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -112,6 +191,58 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A307580419E5693400780C45 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				A3C6D4BF19EEA2B8009BAF1E /* UIColor.swift */,
+				A3C6D4C019EEA2B8009BAF1E /* ViewControllerUtils.swift */,
+				A307580519E5695500780C45 /* Utils.swift */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		A307580719E5696500780C45 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A30757E319E568DB00780C45 /* ViewController.swift */,
+				A30C768A19E6AE0200212B35 /* MainViewController.swift */,
+				A30C768E19E6B58200212B35 /* RegisterViewController.swift */,
+				A3C49E1319E96B4700F1F2CB /* ReceiptImagesViewController.swift */,
+				A3C7B10619EBC60800F2B3FD /* ReceiptImageDetailViewController.swift */,
+				A3A5475B19ED59AB00D884FC /* AddReceiptTableViewController.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		A307581419E572F200780C45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A307581919E572F200780C45 /* Alamofire.framework */,
+				A307581B19E572F200780C45 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A30C768619E678BD00212B35 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				A30C768719E678D500212B35 /* UserModel.swift */,
+				A37E86BA19E6CE28004A8C0F /* ReceiptModel.swift */,
+				A3C49E0D19E965D100F1F2CB /* ReceiptImageModel.swift */,
+				A31D9A7519EE50EB0058C6DC /* CategoriesModel.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		A37E86B519E6CD42004A8C0F /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				A3C49E1519E96C1C00F1F2CB /* ReceiptImagesCollectionViewCell.swift */,
+				A37E86B819E6CD70004A8C0F /* MainViewTableViewCell.swift */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,6 +253,7 @@
 				A30757D819E568DB00780C45 /* Sources */,
 				A30757D919E568DB00780C45 /* Frameworks */,
 				A30757DA19E568DB00780C45 /* Resources */,
+				A307581D19E5735E00780C45 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +311,12 @@
 			mainGroup = A30757D319E568DB00780C45;
 			productRefGroup = A30757DD19E568DB00780C45 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A307581419E572F200780C45 /* Products */;
+					ProjectRef = A307581319E572F200780C45 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A30757DB19E568DB00780C45 /* skizzel */,
@@ -187,13 +325,34 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		A307581919E572F200780C45 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = A307581819E572F200780C45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A307581B19E572F200780C45 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = A307581A19E572F200780C45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		A30757DA19E568DB00780C45 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A307580219E568F500780C45 /* config.plist in Resources */,
+				A307582219E57BDF00780C45 /* button.png in Resources */,
 				A30757E719E568DB00780C45 /* Main.storyboard in Resources */,
 				A30757EC19E568DB00780C45 /* LaunchScreen.xib in Resources */,
+				A307582619E57FAB00780C45 /* logo.png in Resources */,
+				A307582419E57C0700780C45 /* register.png in Resources */,
 				A30757E919E568DB00780C45 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,8 +371,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A31D9A7619EE50EB0058C6DC /* CategoriesModel.swift in Sources */,
+				A3C6D4C219EEA2B8009BAF1E /* ViewControllerUtils.swift in Sources */,
+				A3C49E1419E96B4700F1F2CB /* ReceiptImagesViewController.swift in Sources */,
+				A307581219E5724E00780C45 /* APIController.swift in Sources */,
+				A37E86B919E6CD70004A8C0F /* MainViewTableViewCell.swift in Sources */,
+				A3C49E0E19E965D100F1F2CB /* ReceiptImageModel.swift in Sources */,
+				A3C6D4C119EEA2B8009BAF1E /* UIColor.swift in Sources */,
 				A30757E419E568DB00780C45 /* ViewController.swift in Sources */,
+				A3C49E1619E96C1C00F1F2CB /* ReceiptImagesCollectionViewCell.swift in Sources */,
+				A30C768F19E6B58200212B35 /* RegisterViewController.swift in Sources */,
 				A30757E219E568DB00780C45 /* AppDelegate.swift in Sources */,
+				A3C7B10719EBC60800F2B3FD /* ReceiptImageDetailViewController.swift in Sources */,
+				A37E86BB19E6CE28004A8C0F /* ReceiptModel.swift in Sources */,
+				A30C768B19E6AE0200212B35 /* MainViewController.swift in Sources */,
+				A30C768819E678D500212B35 /* UserModel.swift in Sources */,
+				A3A5475C19ED59AB00D884FC /* AddReceiptTableViewController.swift in Sources */,
+				A307580619E5695500780C45 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +467,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -328,6 +503,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -405,6 +581,7 @@
 				A30757FD19E568DB00780C45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A30757FE19E568DB00780C45 /* Build configuration list for PBXNativeTarget "skizzelTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +590,7 @@
 				A307580019E568DB00780C45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
