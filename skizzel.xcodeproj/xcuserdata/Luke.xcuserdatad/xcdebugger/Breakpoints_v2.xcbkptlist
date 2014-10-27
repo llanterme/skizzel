@@ -2,4 +2,52 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "skizzel/ViewController.swift"
+            timestampString = "435851333.467695"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "didRecieveJson(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "skizzel.ViewController.didRecieveJson (skizzel.ViewController)(ObjectiveC.NSDictionary) -&gt; ()"
+                  moduleName = "skizzel"
+                  urlString = "file:///Users/Luke/Documents/Code/Xcode/Projects/Native/skizzel/skizzel/ViewController.swift"
+                  timestampString = "435768608.266317"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "999">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "skizzel.ViewController.didRecieveJson (skizzel.ViewController)(ObjectiveC.NSDictionary) -&gt; ()"
+                  moduleName = "skizzel"
+                  urlString = "file:///Users/Luke/Documents/Code/Xcode/Projects/Native/skizzel/skizzel/ViewController.swift"
+                  timestampString = "435768608.266544"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "3730">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

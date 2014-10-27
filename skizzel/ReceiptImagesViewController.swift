@@ -8,6 +8,8 @@ class ReceiptImagesViewController: UIViewController, UICollectionViewDelegateFlo
     var receiptImages = [ReceiptImageModel]()
     var currentReceipt: ReceiptModel?
     
+    var imageCache = [String : UIImage]()
+    
     
     override func viewDidLoad() {
         
@@ -18,8 +20,6 @@ class ReceiptImagesViewController: UIViewController, UICollectionViewDelegateFlo
         }
         
         self.title = currentReceipt?.alias;
-        
-        
         super.viewDidLoad()
         
     }
@@ -37,13 +37,44 @@ class ReceiptImagesViewController: UIViewController, UICollectionViewDelegateFlo
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as ReceiptImagesCollectionViewCell
+        let imageCollection = self.receiptImages[indexPath.row]
         
         cell.layer.borderWidth=1.0;
         cell.layer.borderColor = UIColor.grayColor().CGColor
+        cell.imageView?.image = UIImage(named: "723.png");
         
-        let image = self.receiptImages[indexPath.row]
-        let currentImage = UIImage(data: NSData(contentsOfURL: NSURL(string: image.imageURL)))
-        cell.imageView?.image = currentImage;
+        let urlString = imageCollection.imageURL as String
+        var image = self.imageCache[urlString]
+        
+        if( image == nil ) {
+            
+            var imgURL: NSURL = NSURL(string: urlString)
+            
+            let request: NSURLRequest = NSURLRequest(URL: imgURL)
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+                if error == nil {
+                    image = UIImage(data: data)
+                    
+                    self.imageCache[urlString] = image
+                    dispatch_async(dispatch_get_main_queue(), {
+                        if let imageToUpdate = self.collectionView.cellForItemAtIndexPath(indexPath) {
+                            cell.imageView?.image = image;
+                        }
+                    })
+                }
+                else {
+                    println("Error: \(error.localizedDescription)")
+                }
+            })
+            
+        }
+        else {
+            dispatch_async(dispatch_get_main_queue(), {
+                if let imageToUpdate = self.collectionView.cellForItemAtIndexPath(indexPath) {
+                    cell.imageView?.image = image;
+                }
+            })
+        }
         
         return cell
     }
@@ -52,20 +83,37 @@ class ReceiptImagesViewController: UIViewController, UICollectionViewDelegateFlo
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
         
     {
+        
         if (segue.identifier == "receiptImageDetail") {
-
+            
             let indexPaths: NSArray = self.collectionView.indexPathsForSelectedItems() as NSArray
             let indexPath : NSIndexPath = indexPaths[0] as NSIndexPath
-            println(indexPath.row);
+            var selectedList = self.receiptImages[indexPath.row];
             
             let receiptDesController = segue.destinationViewController as ReceiptImageDetailViewController
-
-            var selectedList = self.receiptImages[indexPath.row];
             receiptDesController.currentImage = selectedList;
-
-
         }
+        
     }
+    
+    
+    
+    @IBAction func uploadImageAction(sender: AnyObject) {
+        
+        var uploadImageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("uploadImage") as UploadImagesViewController
+        uploadImageViewController.currentReceiptId = currentReceipt?.receiptId
+        println(currentReceipt?.receiptId)
+        
+        self.presentViewController(uploadImageViewController, animated: true, completion: uploadControllerDismissed)
+        
+    }
+    
+    func uploadControllerDismissed() {
+        
+    }
+    
+    
+    
     
     
     

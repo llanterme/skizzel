@@ -1,14 +1,17 @@
 import UIKit
 
-class ViewController: UITableViewController, APIControllerProtocol{
+class ViewController: UIViewController, APIControllerProtocol{
     
     var api : APIController?
+    
     
     @IBOutlet weak var userPassword: UITextField!
     @IBOutlet weak var userEmail: UITextField!
     
-    @IBAction func loginAction(sender: AnyObject) {
-        
+    
+
+    @IBAction func userLogin(sender: AnyObject) {
+      
         ProgressView.shared.showProgressView(view)
         
         var email = userEmail.text
@@ -17,13 +20,15 @@ class ViewController: UITableViewController, APIControllerProtocol{
         var userModel = UserModel(name: "", email:email, password:password);
         api!.authenticateUser(userModel);
         
-    }
-    
-
-    override func viewDidLoad() {
         
+    }
+    override func viewDidLoad() {
+
         api = APIController(delegate: self)
         super.viewDidLoad()
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
         
     }
 
@@ -31,6 +36,20 @@ class ViewController: UITableViewController, APIControllerProtocol{
         super.didReceiveMemoryWarning()
 
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "register" {
+            
+            var registerViewController: RegisterViewController = segue.destinationViewController as RegisterViewController
+           
+        }
+        
+        
+    }
+    
+
     
     
     func didRecieveJson(results: NSDictionary) {
@@ -43,7 +62,8 @@ class ViewController: UITableViewController, APIControllerProtocol{
         if message == "success" {
             
             Utils.setLocalUser(userId!);
-            let mainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MainViewController") as MainViewController
+            
+            let mainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("receiptMonths") as ReceiptMonthsViewController
             self.navigationController?.pushViewController(mainViewController, animated: true)
             
         } else {

@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A300922C19F53CD200DCDDED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A300922A19F53CD200DCDDED /* Main.storyboard */; };
+		A300923019F53D2200DCDDED /* 54-lock.png in Resources */ = {isa = PBXBuildFile; fileRef = A300922F19F53D2200DCDDED /* 54-lock.png */; };
+		A300923219F53D5700DCDDED /* 18-envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = A300923119F53D5700DCDDED /* 18-envelope.png */; };
 		A30757E219E568DB00780C45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30757E119E568DB00780C45 /* AppDelegate.swift */; };
 		A30757E419E568DB00780C45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30757E319E568DB00780C45 /* ViewController.swift */; };
-		A30757E719E568DB00780C45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30757E519E568DB00780C45 /* Main.storyboard */; };
 		A30757E919E568DB00780C45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30757E819E568DB00780C45 /* Images.xcassets */; };
 		A30757EC19E568DB00780C45 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A30757EA19E568DB00780C45 /* LaunchScreen.xib */; };
 		A30757F819E568DB00780C45 /* skizzelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30757F719E568DB00780C45 /* skizzelTests.swift */; };
@@ -24,16 +26,29 @@
 		A30C768819E678D500212B35 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C768719E678D500212B35 /* UserModel.swift */; };
 		A30C768B19E6AE0200212B35 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C768A19E6AE0200212B35 /* MainViewController.swift */; };
 		A30C768F19E6B58200212B35 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C768E19E6B58200212B35 /* RegisterViewController.swift */; };
+		A31302DE19EFA98D002E76F2 /* image_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A31302DD19EFA98D002E76F2 /* image_placeholder.png */; };
 		A31D9A7619EE50EB0058C6DC /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31D9A7519EE50EB0058C6DC /* CategoriesModel.swift */; };
+		A33B5F6019F62FD40058EAD1 /* 723.png in Resources */ = {isa = PBXBuildFile; fileRef = A33B5F5F19F62FD40058EAD1 /* 723.png */; };
+		A33B5F6219F665E60058EAD1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B5F6119F665E60058EAD1 /* TestViewController.swift */; };
 		A37E86B919E6CD70004A8C0F /* MainViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E86B819E6CD70004A8C0F /* MainViewTableViewCell.swift */; };
 		A37E86BB19E6CE28004A8C0F /* ReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E86BA19E6CE28004A8C0F /* ReceiptModel.swift */; };
+		A39F5D5819F9467B00A486F4 /* ReceiptMonthsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39F5D5719F9467B00A486F4 /* ReceiptMonthsViewController.swift */; };
+		A39F5D5C19F946E500A486F4 /* ReceiptMonthsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39F5D5B19F946E500A486F4 /* ReceiptMonthsModel.swift */; };
+		A39F5D5E19F9490E00A486F4 /* ReceiptMonthsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39F5D5D19F9490E00A486F4 /* ReceiptMonthsTableViewCell.swift */; };
 		A3A5475C19ED59AB00D884FC /* AddReceiptTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A5475B19ED59AB00D884FC /* AddReceiptTableViewController.swift */; };
+		A3AC82BF19F2A0A2001B2E78 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A3AC82BD19F2A0A2001B2E78 /* images.jpeg */; };
+		A3AC82C019F2A0A2001B2E78 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = A3AC82BE19F2A0A2001B2E78 /* back.png */; };
+		A3AC82C419F3977C001B2E78 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A3AC82C319F3977C001B2E78 /* placeholder.png */; };
 		A3C49E0E19E965D100F1F2CB /* ReceiptImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C49E0D19E965D100F1F2CB /* ReceiptImageModel.swift */; };
 		A3C49E1419E96B4700F1F2CB /* ReceiptImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C49E1319E96B4700F1F2CB /* ReceiptImagesViewController.swift */; };
 		A3C49E1619E96C1C00F1F2CB /* ReceiptImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C49E1519E96C1C00F1F2CB /* ReceiptImagesCollectionViewCell.swift */; };
 		A3C6D4C119EEA2B8009BAF1E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C6D4BF19EEA2B8009BAF1E /* UIColor.swift */; };
 		A3C6D4C219EEA2B8009BAF1E /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C6D4C019EEA2B8009BAF1E /* ViewControllerUtils.swift */; };
+		A3C6D4C719EEAF77009BAF1E /* UploadImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C6D4C619EEAF77009BAF1E /* UploadImagesViewController.swift */; };
 		A3C7B10719EBC60800F2B3FD /* ReceiptImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C7B10619EBC60800F2B3FD /* ReceiptImageDetailViewController.swift */; };
+		A3E0C9E119F5682B00E05705 /* 111-user.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E0C9E019F5682B00E05705 /* 111-user.png */; };
+		A3E41F6519FCB72400955800 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E41F6419FCB72400955800 /* SideBarTableViewController.swift */; };
+		A3E41F6919FCC47200955800 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E41F6819FCC47200955800 /* SideBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,11 +90,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A300922B19F53CD200DCDDED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A300922F19F53D2200DCDDED /* 54-lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "54-lock.png"; sourceTree = "<group>"; };
+		A300923119F53D5700DCDDED /* 18-envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "18-envelope.png"; sourceTree = "<group>"; };
 		A30757DC19E568DB00780C45 /* skizzel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = skizzel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30757E019E568DB00780C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A30757E119E568DB00780C45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A30757E319E568DB00780C45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A30757E619E568DB00780C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A30757E819E568DB00780C45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A30757EB19E568DB00780C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A30757F119E568DB00780C45 /* skizzelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = skizzelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,16 +112,29 @@
 		A30C768719E678D500212B35 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		A30C768A19E6AE0200212B35 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A30C768E19E6B58200212B35 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A31302DD19EFA98D002E76F2 /* image_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_placeholder.png; sourceTree = "<group>"; };
 		A31D9A7519EE50EB0058C6DC /* CategoriesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
+		A33B5F5F19F62FD40058EAD1 /* 723.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 723.png; sourceTree = "<group>"; };
+		A33B5F6119F665E60058EAD1 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		A37E86B819E6CD70004A8C0F /* MainViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCell.swift; sourceTree = "<group>"; };
 		A37E86BA19E6CE28004A8C0F /* ReceiptModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptModel.swift; sourceTree = "<group>"; };
+		A39F5D5719F9467B00A486F4 /* ReceiptMonthsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptMonthsViewController.swift; sourceTree = "<group>"; };
+		A39F5D5B19F946E500A486F4 /* ReceiptMonthsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptMonthsModel.swift; sourceTree = "<group>"; };
+		A39F5D5D19F9490E00A486F4 /* ReceiptMonthsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptMonthsTableViewCell.swift; sourceTree = "<group>"; };
 		A3A5475B19ED59AB00D884FC /* AddReceiptTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReceiptTableViewController.swift; sourceTree = "<group>"; };
+		A3AC82BD19F2A0A2001B2E78 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
+		A3AC82BE19F2A0A2001B2E78 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		A3AC82C319F3977C001B2E78 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		A3C49E0D19E965D100F1F2CB /* ReceiptImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptImageModel.swift; sourceTree = "<group>"; };
 		A3C49E1319E96B4700F1F2CB /* ReceiptImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptImagesViewController.swift; sourceTree = "<group>"; };
 		A3C49E1519E96C1C00F1F2CB /* ReceiptImagesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		A3C6D4BF19EEA2B8009BAF1E /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A3C6D4C019EEA2B8009BAF1E /* ViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
+		A3C6D4C619EEAF77009BAF1E /* UploadImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImagesViewController.swift; sourceTree = "<group>"; };
 		A3C7B10619EBC60800F2B3FD /* ReceiptImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptImageDetailViewController.swift; sourceTree = "<group>"; };
+		A3E0C9E019F5682B00E05705 /* 111-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "111-user.png"; sourceTree = "<group>"; };
+		A3E41F6419FCB72400955800 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
+		A3E41F6819FCC47200955800 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,15 +178,16 @@
 		A30757DE19E568DB00780C45 /* skizzel */ = {
 			isa = PBXGroup;
 			children = (
+				A33B5F6119F665E60058EAD1 /* TestViewController.swift */,
 				A307581119E5724E00780C45 /* APIController.swift */,
 				A30757E119E568DB00780C45 /* AppDelegate.swift */,
 				A37E86B519E6CD42004A8C0F /* cells */,
 				A30C768619E678BD00212B35 /* models */,
 				A307580719E5696500780C45 /* controllers */,
 				A307580419E5693400780C45 /* utils */,
-				A30757E519E568DB00780C45 /* Main.storyboard */,
 				A30757E819E568DB00780C45 /* Images.xcassets */,
 				A30757EA19E568DB00780C45 /* LaunchScreen.xib */,
+				A300922A19F53CD200DCDDED /* Main.storyboard */,
 				A30757DF19E568DB00780C45 /* Supporting Files */,
 			);
 			path = skizzel;
@@ -165,6 +196,14 @@
 		A30757DF19E568DB00780C45 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A33B5F5F19F62FD40058EAD1 /* 723.png */,
+				A3E0C9E019F5682B00E05705 /* 111-user.png */,
+				A300923119F53D5700DCDDED /* 18-envelope.png */,
+				A300922F19F53D2200DCDDED /* 54-lock.png */,
+				A3AC82C319F3977C001B2E78 /* placeholder.png */,
+				A3AC82BD19F2A0A2001B2E78 /* images.jpeg */,
+				A3AC82BE19F2A0A2001B2E78 /* back.png */,
+				A31302DD19EFA98D002E76F2 /* image_placeholder.png */,
 				A307582519E57FAB00780C45 /* logo.png */,
 				A307582319E57C0700780C45 /* register.png */,
 				A307582119E57BDF00780C45 /* button.png */,
@@ -210,6 +249,10 @@
 				A3C49E1319E96B4700F1F2CB /* ReceiptImagesViewController.swift */,
 				A3C7B10619EBC60800F2B3FD /* ReceiptImageDetailViewController.swift */,
 				A3A5475B19ED59AB00D884FC /* AddReceiptTableViewController.swift */,
+				A3C6D4C619EEAF77009BAF1E /* UploadImagesViewController.swift */,
+				A39F5D5719F9467B00A486F4 /* ReceiptMonthsViewController.swift */,
+				A3E41F6419FCB72400955800 /* SideBarTableViewController.swift */,
+				A3E41F6819FCC47200955800 /* SideBar.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -230,6 +273,7 @@
 				A37E86BA19E6CE28004A8C0F /* ReceiptModel.swift */,
 				A3C49E0D19E965D100F1F2CB /* ReceiptImageModel.swift */,
 				A31D9A7519EE50EB0058C6DC /* CategoriesModel.swift */,
+				A39F5D5B19F946E500A486F4 /* ReceiptMonthsModel.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -239,6 +283,7 @@
 			children = (
 				A3C49E1519E96C1C00F1F2CB /* ReceiptImagesCollectionViewCell.swift */,
 				A37E86B819E6CD70004A8C0F /* MainViewTableViewCell.swift */,
+				A39F5D5D19F9490E00A486F4 /* ReceiptMonthsTableViewCell.swift */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -349,10 +394,18 @@
 			files = (
 				A307580219E568F500780C45 /* config.plist in Resources */,
 				A307582219E57BDF00780C45 /* button.png in Resources */,
-				A30757E719E568DB00780C45 /* Main.storyboard in Resources */,
+				A300922C19F53CD200DCDDED /* Main.storyboard in Resources */,
+				A300923219F53D5700DCDDED /* 18-envelope.png in Resources */,
+				A3AC82BF19F2A0A2001B2E78 /* images.jpeg in Resources */,
+				A31302DE19EFA98D002E76F2 /* image_placeholder.png in Resources */,
+				A33B5F6019F62FD40058EAD1 /* 723.png in Resources */,
+				A3E0C9E119F5682B00E05705 /* 111-user.png in Resources */,
 				A30757EC19E568DB00780C45 /* LaunchScreen.xib in Resources */,
 				A307582619E57FAB00780C45 /* logo.png in Resources */,
+				A3AC82C019F2A0A2001B2E78 /* back.png in Resources */,
 				A307582419E57C0700780C45 /* register.png in Resources */,
+				A300923019F53D2200DCDDED /* 54-lock.png in Resources */,
+				A3AC82C419F3977C001B2E78 /* placeholder.png in Resources */,
 				A30757E919E568DB00780C45 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,21 +425,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				A31D9A7619EE50EB0058C6DC /* CategoriesModel.swift in Sources */,
+				A33B5F6219F665E60058EAD1 /* TestViewController.swift in Sources */,
 				A3C6D4C219EEA2B8009BAF1E /* ViewControllerUtils.swift in Sources */,
+				A3C6D4C719EEAF77009BAF1E /* UploadImagesViewController.swift in Sources */,
 				A3C49E1419E96B4700F1F2CB /* ReceiptImagesViewController.swift in Sources */,
+				A3E41F6519FCB72400955800 /* SideBarTableViewController.swift in Sources */,
 				A307581219E5724E00780C45 /* APIController.swift in Sources */,
 				A37E86B919E6CD70004A8C0F /* MainViewTableViewCell.swift in Sources */,
 				A3C49E0E19E965D100F1F2CB /* ReceiptImageModel.swift in Sources */,
 				A3C6D4C119EEA2B8009BAF1E /* UIColor.swift in Sources */,
+				A3E41F6919FCC47200955800 /* SideBar.swift in Sources */,
 				A30757E419E568DB00780C45 /* ViewController.swift in Sources */,
 				A3C49E1619E96C1C00F1F2CB /* ReceiptImagesCollectionViewCell.swift in Sources */,
+				A39F5D5C19F946E500A486F4 /* ReceiptMonthsModel.swift in Sources */,
 				A30C768F19E6B58200212B35 /* RegisterViewController.swift in Sources */,
+				A39F5D5819F9467B00A486F4 /* ReceiptMonthsViewController.swift in Sources */,
 				A30757E219E568DB00780C45 /* AppDelegate.swift in Sources */,
 				A3C7B10719EBC60800F2B3FD /* ReceiptImageDetailViewController.swift in Sources */,
 				A37E86BB19E6CE28004A8C0F /* ReceiptModel.swift in Sources */,
 				A30C768B19E6AE0200212B35 /* MainViewController.swift in Sources */,
 				A30C768819E678D500212B35 /* UserModel.swift in Sources */,
 				A3A5475C19ED59AB00D884FC /* AddReceiptTableViewController.swift in Sources */,
+				A39F5D5E19F9490E00A486F4 /* ReceiptMonthsTableViewCell.swift in Sources */,
 				A307580619E5695500780C45 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,10 +470,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A30757E519E568DB00780C45 /* Main.storyboard */ = {
+		A300922A19F53CD200DCDDED /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A30757E619E568DB00780C45 /* Base */,
+				A300922B19F53CD200DCDDED /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

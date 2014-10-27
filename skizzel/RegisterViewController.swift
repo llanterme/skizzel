@@ -6,20 +6,16 @@ class RegisterViewController: UIViewController, APIControllerProtocol {
     
     var api : APIController?
 
-
+    
+    
     @IBOutlet weak var userPassword: UITextField!
-    @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userEmail: UITextField!
+    @IBOutlet weak var userName: UITextField!
     
     
-    @IBAction func cancelRegAction(sender: AnyObject) {
+    @IBAction func registerUser(sender: AnyObject) {
         
-    dismissViewControllerAnimated(true, completion: nil)
-        
-    }
-    
-    @IBAction func registerAction(sender: AnyObject) {
-        
+        api = APIController(delegate: self)
         
         var email = userEmail.text
         var password = userPassword.text
@@ -27,11 +23,20 @@ class RegisterViewController: UIViewController, APIControllerProtocol {
         
         var userModel = UserModel(name: name, email:email, password:password);
         api!.authenticateUser(userModel);
+
+        
+    }
+ 
+    @IBAction func cancelRegistration(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+
+        
         
     }
     override func viewDidLoad() {
         
-         api = APIController(delegate: self)
+    
          super.viewDidLoad()
 
         
