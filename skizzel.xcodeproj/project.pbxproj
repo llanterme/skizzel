@@ -26,12 +26,13 @@
 		A30C768819E678D500212B35 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C768719E678D500212B35 /* UserModel.swift */; };
 		A30C768B19E6AE0200212B35 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C768A19E6AE0200212B35 /* MainViewController.swift */; };
 		A30C768F19E6B58200212B35 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C768E19E6B58200212B35 /* RegisterViewController.swift */; };
+		A30E38451A05237F000F8D12 /* loading_image_placeholder.gif in Resources */ = {isa = PBXBuildFile; fileRef = A30E38441A05237F000F8D12 /* loading_image_placeholder.gif */; };
 		A31302DE19EFA98D002E76F2 /* image_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A31302DD19EFA98D002E76F2 /* image_placeholder.png */; };
 		A31D9A7619EE50EB0058C6DC /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31D9A7519EE50EB0058C6DC /* CategoriesModel.swift */; };
-		A33B5F6019F62FD40058EAD1 /* 723.png in Resources */ = {isa = PBXBuildFile; fileRef = A33B5F5F19F62FD40058EAD1 /* 723.png */; };
 		A33B5F6219F665E60058EAD1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B5F6119F665E60058EAD1 /* TestViewController.swift */; };
 		A37E86B919E6CD70004A8C0F /* MainViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E86B819E6CD70004A8C0F /* MainViewTableViewCell.swift */; };
 		A37E86BB19E6CE28004A8C0F /* ReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E86BA19E6CE28004A8C0F /* ReceiptModel.swift */; };
+		A390E1931A011A3C00D3F4B9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A390E1921A011A3C00D3F4B9 /* SwiftyJSON.swift */; };
 		A39F5D5819F9467B00A486F4 /* ReceiptMonthsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39F5D5719F9467B00A486F4 /* ReceiptMonthsViewController.swift */; };
 		A39F5D5C19F946E500A486F4 /* ReceiptMonthsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39F5D5B19F946E500A486F4 /* ReceiptMonthsModel.swift */; };
 		A39F5D5E19F9490E00A486F4 /* ReceiptMonthsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39F5D5D19F9490E00A486F4 /* ReceiptMonthsTableViewCell.swift */; };
@@ -39,6 +40,12 @@
 		A3AC82BF19F2A0A2001B2E78 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A3AC82BD19F2A0A2001B2E78 /* images.jpeg */; };
 		A3AC82C019F2A0A2001B2E78 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = A3AC82BE19F2A0A2001B2E78 /* back.png */; };
 		A3AC82C419F3977C001B2E78 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A3AC82C319F3977C001B2E78 /* placeholder.png */; };
+		A3BD5A9219FF8B0A003E9DD0 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3BD5A9119FF8B0A003E9DD0 /* reveal-icon@2x.png */; };
+		A3BD5A9419FF8BD0003E9DD0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5A9319FF8BD0003E9DD0 /* SettingsViewController.swift */; };
+		A3BD5A9F19FFDB4F003E9DD0 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3BD5A9D19FFDB4F003E9DD0 /* 1.png */; };
+		A3BD5AA019FFDB4F003E9DD0 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = A3BD5A9E19FFDB4F003E9DD0 /* 2.png */; };
+		A3BD5AA219FFDC91003E9DD0 /* MillageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5AA119FFDC91003E9DD0 /* MillageViewController.swift */; };
+		A3C1B9C11A091B1600659548 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C1B9C01A091B1600659548 /* CoreLocation.framework */; };
 		A3C49E0E19E965D100F1F2CB /* ReceiptImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C49E0D19E965D100F1F2CB /* ReceiptImageModel.swift */; };
 		A3C49E1419E96B4700F1F2CB /* ReceiptImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C49E1319E96B4700F1F2CB /* ReceiptImagesViewController.swift */; };
 		A3C49E1619E96C1C00F1F2CB /* ReceiptImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C49E1519E96C1C00F1F2CB /* ReceiptImagesCollectionViewCell.swift */; };
@@ -112,12 +119,13 @@
 		A30C768719E678D500212B35 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		A30C768A19E6AE0200212B35 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A30C768E19E6B58200212B35 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A30E38441A05237F000F8D12 /* loading_image_placeholder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading_image_placeholder.gif; sourceTree = "<group>"; };
 		A31302DD19EFA98D002E76F2 /* image_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_placeholder.png; sourceTree = "<group>"; };
 		A31D9A7519EE50EB0058C6DC /* CategoriesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
-		A33B5F5F19F62FD40058EAD1 /* 723.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 723.png; sourceTree = "<group>"; };
 		A33B5F6119F665E60058EAD1 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		A37E86B819E6CD70004A8C0F /* MainViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCell.swift; sourceTree = "<group>"; };
 		A37E86BA19E6CE28004A8C0F /* ReceiptModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptModel.swift; sourceTree = "<group>"; };
+		A390E1921A011A3C00D3F4B9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		A39F5D5719F9467B00A486F4 /* ReceiptMonthsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptMonthsViewController.swift; sourceTree = "<group>"; };
 		A39F5D5B19F946E500A486F4 /* ReceiptMonthsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptMonthsModel.swift; sourceTree = "<group>"; };
 		A39F5D5D19F9490E00A486F4 /* ReceiptMonthsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptMonthsTableViewCell.swift; sourceTree = "<group>"; };
@@ -125,6 +133,12 @@
 		A3AC82BD19F2A0A2001B2E78 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
 		A3AC82BE19F2A0A2001B2E78 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		A3AC82C319F3977C001B2E78 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		A3BD5A9119FF8B0A003E9DD0 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@2x.png"; sourceTree = "<group>"; };
+		A3BD5A9319FF8BD0003E9DD0 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A3BD5A9D19FFDB4F003E9DD0 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		A3BD5A9E19FFDB4F003E9DD0 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		A3BD5AA119FFDC91003E9DD0 /* MillageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MillageViewController.swift; sourceTree = "<group>"; };
+		A3C1B9C01A091B1600659548 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A3C49E0D19E965D100F1F2CB /* ReceiptImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptImageModel.swift; sourceTree = "<group>"; };
 		A3C49E1319E96B4700F1F2CB /* ReceiptImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptImagesViewController.swift; sourceTree = "<group>"; };
 		A3C49E1519E96C1C00F1F2CB /* ReceiptImagesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptImagesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -142,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C1B9C11A091B1600659548 /* CoreLocation.framework in Frameworks */,
 				A307581C19E5735000780C45 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +174,7 @@
 		A30757D319E568DB00780C45 = {
 			isa = PBXGroup;
 			children = (
+				A3C1B9C01A091B1600659548 /* CoreLocation.framework */,
 				A307581319E572F200780C45 /* Alamofire.xcodeproj */,
 				A30757DE19E568DB00780C45 /* skizzel */,
 				A30757F419E568DB00780C45 /* skizzelTests */,
@@ -196,7 +212,10 @@
 		A30757DF19E568DB00780C45 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A33B5F5F19F62FD40058EAD1 /* 723.png */,
+				A30E38441A05237F000F8D12 /* loading_image_placeholder.gif */,
+				A3BD5A9D19FFDB4F003E9DD0 /* 1.png */,
+				A3BD5A9E19FFDB4F003E9DD0 /* 2.png */,
+				A3BD5A9119FF8B0A003E9DD0 /* reveal-icon@2x.png */,
 				A3E0C9E019F5682B00E05705 /* 111-user.png */,
 				A300923119F53D5700DCDDED /* 18-envelope.png */,
 				A300922F19F53D2200DCDDED /* 54-lock.png */,
@@ -233,6 +252,7 @@
 		A307580419E5693400780C45 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				A390E1921A011A3C00D3F4B9 /* SwiftyJSON.swift */,
 				A3C6D4BF19EEA2B8009BAF1E /* UIColor.swift */,
 				A3C6D4C019EEA2B8009BAF1E /* ViewControllerUtils.swift */,
 				A307580519E5695500780C45 /* Utils.swift */,
@@ -244,15 +264,17 @@
 			isa = PBXGroup;
 			children = (
 				A30757E319E568DB00780C45 /* ViewController.swift */,
+				A39F5D5719F9467B00A486F4 /* ReceiptMonthsViewController.swift */,
 				A30C768A19E6AE0200212B35 /* MainViewController.swift */,
 				A30C768E19E6B58200212B35 /* RegisterViewController.swift */,
 				A3C49E1319E96B4700F1F2CB /* ReceiptImagesViewController.swift */,
 				A3C7B10619EBC60800F2B3FD /* ReceiptImageDetailViewController.swift */,
 				A3A5475B19ED59AB00D884FC /* AddReceiptTableViewController.swift */,
 				A3C6D4C619EEAF77009BAF1E /* UploadImagesViewController.swift */,
-				A39F5D5719F9467B00A486F4 /* ReceiptMonthsViewController.swift */,
 				A3E41F6419FCB72400955800 /* SideBarTableViewController.swift */,
 				A3E41F6819FCC47200955800 /* SideBar.swift */,
+				A3BD5AA119FFDC91003E9DD0 /* MillageViewController.swift */,
+				A3BD5A9319FF8BD0003E9DD0 /* SettingsViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -394,13 +416,16 @@
 			files = (
 				A307580219E568F500780C45 /* config.plist in Resources */,
 				A307582219E57BDF00780C45 /* button.png in Resources */,
+				A3BD5AA019FFDB4F003E9DD0 /* 2.png in Resources */,
 				A300922C19F53CD200DCDDED /* Main.storyboard in Resources */,
 				A300923219F53D5700DCDDED /* 18-envelope.png in Resources */,
+				A3BD5A9219FF8B0A003E9DD0 /* reveal-icon@2x.png in Resources */,
 				A3AC82BF19F2A0A2001B2E78 /* images.jpeg in Resources */,
 				A31302DE19EFA98D002E76F2 /* image_placeholder.png in Resources */,
-				A33B5F6019F62FD40058EAD1 /* 723.png in Resources */,
+				A3BD5A9F19FFDB4F003E9DD0 /* 1.png in Resources */,
 				A3E0C9E119F5682B00E05705 /* 111-user.png in Resources */,
 				A30757EC19E568DB00780C45 /* LaunchScreen.xib in Resources */,
+				A30E38451A05237F000F8D12 /* loading_image_placeholder.gif in Resources */,
 				A307582619E57FAB00780C45 /* logo.png in Resources */,
 				A3AC82C019F2A0A2001B2E78 /* back.png in Resources */,
 				A307582419E57C0700780C45 /* register.png in Resources */,
@@ -432,12 +457,14 @@
 				A3E41F6519FCB72400955800 /* SideBarTableViewController.swift in Sources */,
 				A307581219E5724E00780C45 /* APIController.swift in Sources */,
 				A37E86B919E6CD70004A8C0F /* MainViewTableViewCell.swift in Sources */,
+				A3BD5A9419FF8BD0003E9DD0 /* SettingsViewController.swift in Sources */,
 				A3C49E0E19E965D100F1F2CB /* ReceiptImageModel.swift in Sources */,
 				A3C6D4C119EEA2B8009BAF1E /* UIColor.swift in Sources */,
 				A3E41F6919FCC47200955800 /* SideBar.swift in Sources */,
 				A30757E419E568DB00780C45 /* ViewController.swift in Sources */,
 				A3C49E1619E96C1C00F1F2CB /* ReceiptImagesCollectionViewCell.swift in Sources */,
 				A39F5D5C19F946E500A486F4 /* ReceiptMonthsModel.swift in Sources */,
+				A390E1931A011A3C00D3F4B9 /* SwiftyJSON.swift in Sources */,
 				A30C768F19E6B58200212B35 /* RegisterViewController.swift in Sources */,
 				A39F5D5819F9467B00A486F4 /* ReceiptMonthsViewController.swift in Sources */,
 				A30757E219E568DB00780C45 /* AppDelegate.swift in Sources */,
@@ -447,6 +474,7 @@
 				A30C768819E678D500212B35 /* UserModel.swift in Sources */,
 				A3A5475C19ED59AB00D884FC /* AddReceiptTableViewController.swift in Sources */,
 				A39F5D5E19F9490E00A486F4 /* ReceiptMonthsTableViewCell.swift in Sources */,
+				A3BD5AA219FFDC91003E9DD0 /* MillageViewController.swift in Sources */,
 				A307580619E5695500780C45 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

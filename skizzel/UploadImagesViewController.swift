@@ -71,7 +71,7 @@ class UploadImagesViewController: UIViewController, UIImagePickerControllerDeleg
     func didRecieveJson(results: NSDictionary) {
         
         ProgressView.shared.hideProgressView()
-        var message = results["status"] as? String
+        var message = results["Status"] as? String
         
         if(message == "success") {
             let alert = UIAlertView()
@@ -97,23 +97,6 @@ class UploadImagesViewController: UIViewController, UIImagePickerControllerDeleg
         
     }
     
-    func alertView(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int)
-    {
-        switch buttonIndex{
-            
-        case 0:
-            NSLog("Retry");
-            break;
-        case 1:
-            navigateToMain()
-            break;
-        default:
-            NSLog("Default");
-            break;
-            //Some code here..
-            
-        }
-    }
     
     func navigateToMain() {
         

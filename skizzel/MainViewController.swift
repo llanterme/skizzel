@@ -49,6 +49,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         cell.receiptAlias.text = receipt.alias
         cell.receiptDateCreated.text = receipt.dateCreated
+        cell.receiptCategpry.text = receipt.category
         
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = UIColor(netHex:0x5BCAFF)
@@ -58,6 +59,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell.backgroundColor = UIColor(netHex:0xE0F8D8)
             cell.receiptBlockImage.backgroundColor = UIColor(netHex:0x81F3FD)
             cell.receiptAlias.textColor = UIColor(netHex:0x34AADC)
+            cell.receiptCategpry.textColor = UIColor(netHex:0x34AADC)
             cell.receiptDateCreated.textColor = UIColor(netHex:0x34AADC)
         }
 
@@ -103,13 +105,19 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         ProgressView.shared.hideProgressView()
        
         //save categories to nsdefaults;
-        var userCategories:NSArray = results ["categoriesList"] as? NSArray ?? []
+        var userCategories:NSArray = results["UserOverView"]?["CategoriesList"] as? NSArray ?? []
         Utils.setUserCategories(userCategories);
         
-         var resultsArr: NSArray = results["receiptList"] as? NSArray ?? []
+         var resultsArr: NSArray = results["UserOverView"]?["ReceiptList"] as? NSArray ?? []
+        
          self.receiptLists = ReceiptModel.getReceipts(resultsArr);
          self.receiptTable!.reloadData()
+        
+        
+        
     }
+    
+    
     
     func refreshControlSetup(){
         self.refreshControl = UIRefreshControl()

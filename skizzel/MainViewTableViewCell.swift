@@ -14,7 +14,8 @@ class MainViewTableViewCell: UITableViewCell {
     
     @IBOutlet weak var receiptBlockImage: UIImageView!
     @IBOutlet weak var receiptDateCreated: UILabel!
-
+    @IBOutlet weak var receiptCategpry: UILabel!
+    
     @IBOutlet weak var receiptAlias: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

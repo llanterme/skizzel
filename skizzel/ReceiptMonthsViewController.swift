@@ -23,10 +23,16 @@ class ReceiptMonthsViewController: UIViewController, UITableViewDataSource, UITa
         
         refreshControlSetup()
         
-        sideBar = SideBar(sourceView: self.view, menuItems: ["first item", "second item", "funny item", "another item"])
+        sideBar = SideBar(sourceView: self.view, menuItems: ["Catagories", "Millage", "Create"])
         sideBar.delegate = self
 
 
+
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+                sideBar.showSideBar(false)
+                    isMenuOpen = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,9 +81,12 @@ class ReceiptMonthsViewController: UIViewController, UITableViewDataSource, UITa
         
         ProgressView.shared.hideProgressView()
         
+        if(results.count != 0) {
+        
         var resultsArr: NSArray = results[0] as? NSArray ?? []
         self.receiptMonthsLists = ReceiptMonthsModel.getReceiptsMonth(results);
         self.receiptMonthsTableView!.reloadData()
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -110,11 +119,12 @@ class ReceiptMonthsViewController: UIViewController, UITableViewDataSource, UITa
     
     func sideBarDidSelectButtonAtIndex(index: Int) {
         if index == 0{
-            println("0")
             
         } else if index == 1{
             
-            println("1")
+             self.performSegueWithIdentifier("millageSegue", sender: nil)
+        } else if index == 2 {
+            self.performSegueWithIdentifier("createReceiptMonthsSegue", sender: nil)
         }
     }
     

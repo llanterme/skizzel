@@ -56,8 +56,8 @@ class ViewController: UIViewController, APIControllerProtocol{
         
         ProgressView.shared.hideProgressView()
         
-        var userId = results["message"] as? String
-        var message = results["status"] as? String
+        var userId = results["Message"] as? String
+        var message = results["Status"] as? String
         
         if message == "success" {
             
@@ -86,6 +86,10 @@ class ViewController: UIViewController, APIControllerProtocol{
         alert.addButtonWithTitle("OK")
         alert.show()
         
+    }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
     }
 
 

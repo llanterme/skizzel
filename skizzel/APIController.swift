@@ -31,7 +31,7 @@ class APIController {
 
        Alamofire.request(.GET, Utils.getPlistValue("API") + "/UserOverView/" + self.userId + "/" + selectedMonth, parameters: nil)
             .responseJSON { (request, response, JSON, error) in
-               println(JSON)
+
                 if(error == nil) {
                     let jsonResults = JSON as Dictionary<String, NSObject>
                     self.delegate.didRecieveJson!(jsonResults)
@@ -57,7 +57,16 @@ class APIController {
     
     func authenticateUser(user: UserModel) {
         
-        var parameters = ["email": user.email, "password": user.password];
+        let parameters = [
+           
+            "user": [
+                "Email": user.email,
+                "Password": user.password
+
+            ]
+        ]
+
+        
         Alamofire.request(.POST, Utils.getPlistValue("API") + "/Authenticate", parameters: parameters,encoding: .JSON)
             .responseJSON
             { (request, response, JSON, error) in
@@ -72,11 +81,53 @@ class APIController {
         }
        
     }
+    
+    func registerUser(user: UserModel) {
+        
+        let parameters = [
+            
+            "user": [
+                "Email": user.email,
+                "Password": user.password,
+                 "Name": user.name
+                
+            ]
+        ]
+        
+        
+        Alamofire.request(.POST, Utils.getPlistValue("API") + "/RegisterUser", parameters: parameters,encoding: .JSON)
+            .responseJSON
+            { (request, response, JSON, error) in
+                println(error)
+                if (error == nil) {
+                    let jsonResults = JSON as Dictionary<String, NSObject>
+                    self.delegate.didRecieveJson!(jsonResults)
+                } else {
+                    self.delegate.didRecieveError!(error!);
+                }
+                
+        }
+        
+    }
 
     
     func createReceipt(categoryId:String, userId: String, alias:String, dateCreated:String) {
         
-        var parameters = ["userId": userId, "categoryId": categoryId, "alias": alias, "dateCreated" : dateCreated];
+        var parameterss = ["userId": userId, "categoryId": categoryId, "alias": alias, "dateCreated" : dateCreated];
+        
+        
+        let parameters = [
+            
+            "receipt": [
+                "Alias": alias,
+                "UserId": userId,
+                "CategoryId": categoryId,
+                "DateCreated": dateCreated
+                
+            ]
+        ]
+        
+        
         Alamofire.request(.POST, Utils.getPlistValue("API") + "/CreateReceipt", parameters: parameters,encoding: .JSON)
             .responseJSON
             { (request, response, JSON, error) in
@@ -98,7 +149,7 @@ class APIController {
         var manager = Manager.sharedInstance;
         manager.session.configuration.HTTPAdditionalHeaders = ["Content-Type": "application/octet-stream"]
         
-        var url = Utils.getPlistValue("API") + "/Upload?attachmentName=file.jpg" + "_" + receiptId
+        var url = Utils.getPlistValue("API") + "/UploadFile?fileName=file.jpg" + "_" + receiptId
         let imageData: NSMutableData = NSMutableData.dataWithData(UIImageJPEGRepresentation(image, 30));
         
         Alamofire.upload(.POST, url,  imageData)

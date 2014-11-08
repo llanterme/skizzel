@@ -19,8 +19,8 @@ class ReceiptImageModel {
             
              for item in receiptImages as NSMutableArray {
              
-                let receiptImageURL = item["imageURL"] as? String ?? ""
-                let receiptImageId = item["imageId"] as? Int ?? 0
+                let receiptImageURL = item["ImageUrl"] as? String ?? ""
+                let receiptImageId = item["ImageId"] as? Int ?? 0
                 
               var newListItem = ReceiptImageModel(imageURL: receiptImageURL, imageId: receiptImageId)
                 

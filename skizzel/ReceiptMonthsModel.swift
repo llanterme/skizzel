@@ -21,8 +21,8 @@ class ReceiptMonthsModel {
             
             for item in allResults {
                 
-                let month = item["dateCreated"] as? String ?? ""
-                let count = item["dateCount"] as? Int ?? 0
+                let month = item["ReceiptMonth"] as? String ?? ""
+                let count = item["MonthCount"] as? Int ?? 0
                 
                 let newListItem = ReceiptMonthsModel(receiptMonth:month, receiptCount:count );
                 

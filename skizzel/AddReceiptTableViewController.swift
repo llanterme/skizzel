@@ -86,8 +86,10 @@ class AddReceiptTableViewController: UIViewController,UIPickerViewDataSource,UIP
     
     func didRecieveJson(results: NSDictionary) {
         
-        var receiptId = results["message"] as? String
-        var message = results["status"] as? String
+         ProgressView.shared.hideProgressView()
+        
+        var receiptId = results["Message"] as? String
+        var message = results["Status"] as? String
         
         if message == "success" {
             
@@ -125,6 +127,8 @@ class AddReceiptTableViewController: UIViewController,UIPickerViewDataSource,UIP
 
     @IBAction func createReceipt(sender: AnyObject) {
         
+          ProgressView.shared.showProgressView(view)
+        
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd" // superset of OP's format
         
@@ -153,6 +157,10 @@ class AddReceiptTableViewController: UIViewController,UIPickerViewDataSource,UIP
         let defaultTimeZoneStr = formatter.stringFromDate(date);
         
           println("Delivered at: " + defaultTimeZoneStr)
+    }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
     }
    
 }

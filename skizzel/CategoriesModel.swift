@@ -21,8 +21,8 @@ class CategoriesModel {
             
             for item in userCategoriesRaw {
                 
-                let categoryId = item["categoryId"] as? Int ?? 0
-                let category = item["category"] as? String ?? ""
+                let categoryId = item["CategoryId"] as? Int ?? 0
+                let category = item["Category"] as? String ?? ""
                 
                 let newListItem = CategoriesModel(categoryId: categoryId, category: category);
                 

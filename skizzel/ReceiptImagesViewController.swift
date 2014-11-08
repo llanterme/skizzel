@@ -41,7 +41,7 @@ class ReceiptImagesViewController: UIViewController, UICollectionViewDelegateFlo
         
         cell.layer.borderWidth=1.0;
         cell.layer.borderColor = UIColor.grayColor().CGColor
-        cell.imageView?.image = UIImage(named: "723.png");
+      //  cell.imageView?.image = UIImage(named: "placeholder.png");
         
         let urlString = imageCollection.imageURL as String
         var image = self.imageCache[urlString]
