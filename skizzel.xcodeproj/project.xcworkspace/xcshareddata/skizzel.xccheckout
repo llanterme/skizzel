@@ -12,6 +12,8 @@
 	<dict>
 		<key>4BCD31D7EB4341EEFC4091AF0C6E722C3593AD94</key>
 		<string>https://github.com/llanterme/skizzel.git</string>
+		<key>79EA0C4F360E98830418AFAE1A03A39D646B0106</key>
+		<string>https://github.com/SwiftyJSON/Alamofire-SwiftyJSON.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>skizzel.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>4BCD31D7EB4341EEFC4091AF0C6E722C3593AD94</key>
 		<string>../..</string>
+		<key>79EA0C4F360E98830418AFAE1A03A39D646B0106</key>
+		<string>../../Alamofire-SwiftyJSON</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/llanterme/skizzel.git</string>
@@ -28,6 +32,14 @@
 	<string>4BCD31D7EB4341EEFC4091AF0C6E722C3593AD94</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>79EA0C4F360E98830418AFAE1A03A39D646B0106</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Alamofire-SwiftyJSON</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

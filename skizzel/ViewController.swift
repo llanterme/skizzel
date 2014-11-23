@@ -63,8 +63,13 @@ class ViewController: UIViewController, APIControllerProtocol{
             
             Utils.setLocalUser(userId!);
             
-            let mainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("receiptMonths") as ReceiptMonthsViewController
-            self.navigationController?.pushViewController(mainViewController, animated: true)
+            //save categories to nsdefaults;
+            var userCategories:NSArray = results["UserCategories"] as? NSArray ?? []
+            Utils.setUserCategories(userCategories);
+
+            
+            let landingViewController = self.storyboard?.instantiateViewControllerWithIdentifier("landingController") as LandingTableViewController
+            self.navigationController?.pushViewController(landingViewController, animated: true)
             
         } else {
             let alert = UIAlertView()

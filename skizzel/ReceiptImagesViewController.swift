@@ -48,7 +48,7 @@ class ReceiptImagesViewController: UIViewController, UICollectionViewDelegateFlo
         
         if( image == nil ) {
             
-            var imgURL: NSURL = NSURL(string: urlString)
+            var imgURL: NSURL = NSURL(string: urlString)!
             
             let request: NSURLRequest = NSURLRequest(URL: imgURL)
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
@@ -86,7 +86,7 @@ class ReceiptImagesViewController: UIViewController, UICollectionViewDelegateFlo
         
         if (segue.identifier == "receiptImageDetail") {
             
-            let indexPaths: NSArray = self.collectionView.indexPathsForSelectedItems() as NSArray
+            let indexPaths: NSArray = self.collectionView.indexPathsForSelectedItems()!
             let indexPath : NSIndexPath = indexPaths[0] as NSIndexPath
             var selectedList = self.receiptImages[indexPath.row];
             

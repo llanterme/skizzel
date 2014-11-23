@@ -65,8 +65,15 @@ class AddReceiptTableViewController: UIViewController,UIPickerViewDataSource,UIP
         }
         let titleData = userCategories[row].category
      
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 26.0),NSForegroundColorAttributeName:UIColor.blackColor()])
-        pickerLabel!.attributedText = myTitle
+        let font:UIFont? = UIFont(name: "Georgia", size: 26.0)
+        
+        let attrString = NSAttributedString(
+            string: titleData,
+            attributes: NSDictionary(
+                object: font!,
+                forKey: NSFontAttributeName))
+        
+        pickerLabel!.attributedText = attrString
         
         return pickerLabel
         

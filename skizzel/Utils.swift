@@ -18,6 +18,23 @@ class Utils : UIViewController {
         
     }
     
+    class func setTracking(startLocation: NSArray) {
+        
+        NSUserDefaults.standardUserDefaults().setObject(startLocation, forKey:"startLocation")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+    }
+    
+    class func getTracking() -> NSArray{
+        
+        var userDefaults: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("startLocation")
+        var trackingValues = userDefaults as? NSArray ?? []
+        
+        return trackingValues;
+        
+    }
+    
+    
     class func getUserCategories() -> NSArray{
         
         var userDefaults: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("userCategories")
@@ -26,6 +43,7 @@ class Utils : UIViewController {
         return userCategories;
         
     }
+    
     
     class func checkRegisteredUser() -> String{
         
@@ -41,7 +59,7 @@ class Utils : UIViewController {
         let path = NSBundle.mainBundle().pathForResource("config", ofType: "plist")
         let dict = NSDictionary(contentsOfFile: path!)
         
-        return dict.objectForKey(itemValue) as String;
+        return dict?.objectForKey(itemValue) as String;
     }
     
     class func reformatSelectedMonth(selectedMonth:NSString) -> NSString {

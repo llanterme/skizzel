@@ -30,6 +30,9 @@
 		A31302DE19EFA98D002E76F2 /* image_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A31302DD19EFA98D002E76F2 /* image_placeholder.png */; };
 		A31D9A7619EE50EB0058C6DC /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31D9A7519EE50EB0058C6DC /* CategoriesModel.swift */; };
 		A33B5F6219F665E60058EAD1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B5F6119F665E60058EAD1 /* TestViewController.swift */; };
+		A3630BC91A21E95400273CBE /* MillageCategoriesPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3630BC81A21E95400273CBE /* MillageCategoriesPickerViewController.swift */; };
+		A3630BCB1A21EA3800273CBE /* MillageCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3630BCA1A21EA3800273CBE /* MillageCategoriesCell.swift */; };
+		A3630BCD1A21F8A300273CBE /* LandingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3630BCC1A21F8A300273CBE /* LandingTableViewController.swift */; };
 		A37E86B919E6CD70004A8C0F /* MainViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E86B819E6CD70004A8C0F /* MainViewTableViewCell.swift */; };
 		A37E86BB19E6CE28004A8C0F /* ReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E86BA19E6CE28004A8C0F /* ReceiptModel.swift */; };
 		A390E1931A011A3C00D3F4B9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A390E1921A011A3C00D3F4B9 /* SwiftyJSON.swift */; };
@@ -123,6 +126,9 @@
 		A31302DD19EFA98D002E76F2 /* image_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_placeholder.png; sourceTree = "<group>"; };
 		A31D9A7519EE50EB0058C6DC /* CategoriesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
 		A33B5F6119F665E60058EAD1 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		A3630BC81A21E95400273CBE /* MillageCategoriesPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MillageCategoriesPickerViewController.swift; sourceTree = "<group>"; };
+		A3630BCA1A21EA3800273CBE /* MillageCategoriesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MillageCategoriesCell.swift; sourceTree = "<group>"; };
+		A3630BCC1A21F8A300273CBE /* LandingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingTableViewController.swift; sourceTree = "<group>"; };
 		A37E86B819E6CD70004A8C0F /* MainViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCell.swift; sourceTree = "<group>"; };
 		A37E86BA19E6CE28004A8C0F /* ReceiptModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptModel.swift; sourceTree = "<group>"; };
 		A390E1921A011A3C00D3F4B9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -264,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				A30757E319E568DB00780C45 /* ViewController.swift */,
+				A3630BCC1A21F8A300273CBE /* LandingTableViewController.swift */,
 				A39F5D5719F9467B00A486F4 /* ReceiptMonthsViewController.swift */,
 				A30C768A19E6AE0200212B35 /* MainViewController.swift */,
 				A30C768E19E6B58200212B35 /* RegisterViewController.swift */,
@@ -274,6 +281,7 @@
 				A3E41F6419FCB72400955800 /* SideBarTableViewController.swift */,
 				A3E41F6819FCC47200955800 /* SideBar.swift */,
 				A3BD5AA119FFDC91003E9DD0 /* MillageViewController.swift */,
+				A3630BC81A21E95400273CBE /* MillageCategoriesPickerViewController.swift */,
 				A3BD5A9319FF8BD0003E9DD0 /* SettingsViewController.swift */,
 			);
 			name = controllers;
@@ -306,6 +314,7 @@
 				A3C49E1519E96C1C00F1F2CB /* ReceiptImagesCollectionViewCell.swift */,
 				A37E86B819E6CD70004A8C0F /* MainViewTableViewCell.swift */,
 				A39F5D5D19F9490E00A486F4 /* ReceiptMonthsTableViewCell.swift */,
+				A3630BCA1A21EA3800273CBE /* MillageCategoriesCell.swift */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -453,9 +462,11 @@
 				A33B5F6219F665E60058EAD1 /* TestViewController.swift in Sources */,
 				A3C6D4C219EEA2B8009BAF1E /* ViewControllerUtils.swift in Sources */,
 				A3C6D4C719EEAF77009BAF1E /* UploadImagesViewController.swift in Sources */,
+				A3630BC91A21E95400273CBE /* MillageCategoriesPickerViewController.swift in Sources */,
 				A3C49E1419E96B4700F1F2CB /* ReceiptImagesViewController.swift in Sources */,
 				A3E41F6519FCB72400955800 /* SideBarTableViewController.swift in Sources */,
 				A307581219E5724E00780C45 /* APIController.swift in Sources */,
+				A3630BCB1A21EA3800273CBE /* MillageCategoriesCell.swift in Sources */,
 				A37E86B919E6CD70004A8C0F /* MainViewTableViewCell.swift in Sources */,
 				A3BD5A9419FF8BD0003E9DD0 /* SettingsViewController.swift in Sources */,
 				A3C49E0E19E965D100F1F2CB /* ReceiptImageModel.swift in Sources */,
@@ -475,6 +486,7 @@
 				A3A5475C19ED59AB00D884FC /* AddReceiptTableViewController.swift in Sources */,
 				A39F5D5E19F9490E00A486F4 /* ReceiptMonthsTableViewCell.swift in Sources */,
 				A3BD5AA219FFDC91003E9DD0 /* MillageViewController.swift in Sources */,
+				A3630BCD1A21F8A300273CBE /* LandingTableViewController.swift in Sources */,
 				A307580619E5695500780C45 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

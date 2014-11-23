@@ -1,3 +1,4 @@
+
 import UIKit
 
 protocol SideBarTableViewControllerDelegate {
@@ -30,7 +31,7 @@ class SideBarTableViewController: UITableViewController {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
             
             cell!.backgroundColor = UIColor.clearColor()
-            cell!.textLabel?.textColor = UIColor.darkTextColor()
+            cell!.textLabel.textColor = UIColor.darkTextColor()
             
             let selectedView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: cell!.frame.size.width, height: cell!.frame.size.height))
             selectedView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.3);
@@ -39,7 +40,7 @@ class SideBarTableViewController: UITableViewController {
             cell!.selectedBackgroundView = selectedView;
         }
         
-        cell!.textLabel?.text = tableData[indexPath.row];
+        cell!.textLabel.text = tableData[indexPath.row];
         
 
         return cell!

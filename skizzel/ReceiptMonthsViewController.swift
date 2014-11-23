@@ -1,14 +1,14 @@
 
 import UIKit
 
-class ReceiptMonthsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIControllerProtocol, SideBarDelegate {
+class ReceiptMonthsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIControllerProtocol {
     
     var api : APIController?
     let kCellIdentifier: String = "ReceiptMonthsCell"
     var receiptMonthsLists = [ReceiptMonthsModel]()
     var refreshControl:UIRefreshControl!
-    var sideBar:SideBar = SideBar()
-    var isMenuOpen: Bool = false
+  
+  
 
     @IBOutlet weak var receiptMonthsTableView: UITableView!
     override func viewDidLoad() {
@@ -17,23 +17,17 @@ class ReceiptMonthsViewController: UIViewController, UITableViewDataSource, UITa
         
         ProgressView.shared.showProgressView(view)
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        self.navigationItem.hidesBackButton = true
+        self.navigationItem.hidesBackButton = false
         api = APIController(delegate: self)
         api!.getReceiptMonths()
         
         refreshControlSetup()
         
-        sideBar = SideBar(sourceView: self.view, menuItems: ["Catagories", "Millage", "Create"])
-        sideBar.delegate = self
-
-
-
+  
+  
     }
     
-    override func viewWillAppear(animated: Bool) {
-                sideBar.showSideBar(false)
-                    isMenuOpen = false
-    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -117,29 +111,7 @@ class ReceiptMonthsViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     
-    func sideBarDidSelectButtonAtIndex(index: Int) {
-        if index == 0{
-            
-        } else if index == 1{
-            
-             self.performSegueWithIdentifier("millageSegue", sender: nil)
-        } else if index == 2 {
-            self.performSegueWithIdentifier("createReceiptMonthsSegue", sender: nil)
-        }
-    }
-    
-    
-    @IBAction func showMenu(sender: AnyObject) {
         
-        if(!isMenuOpen) {
-            sideBar.showSideBar(true)
-            isMenuOpen = true
-        } else {
-            sideBar.showSideBar(false)
-            isMenuOpen = false
-        }
-    }
-    
 }
 
     
