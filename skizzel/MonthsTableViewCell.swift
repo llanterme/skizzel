@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReceiptMonthsTableViewCell: UITableViewCell {
+class MonthsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var receiptMonth: UILabel!
 

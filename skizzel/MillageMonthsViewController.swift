@@ -1,16 +1,16 @@
 
 import UIKit
 
-class ReceiptMonthsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIControllerProtocol {
+class MillageMonthsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIControllerProtocol {
     
     var api : APIController?
-    let kCellIdentifier: String = "ReceiptMonthsCell"
-    var receiptMonthsLists = [MonthsModel]()
+    let kCellIdentifier: String = "MillageMonthsCell"
+    var MonthsLists = [MonthsModel]()
     var refreshControl:UIRefreshControl!
-  
-  
 
-    @IBOutlet weak var receiptMonthsTableView: UITableView!
+    
+    @IBOutlet weak var milllageMonthsTableView: UITableView!
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -19,24 +19,23 @@ class ReceiptMonthsViewController: UIViewController, UITableViewDataSource, UITa
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.navigationItem.hidesBackButton = false
         api = APIController(delegate: self)
-        api!.getReceiptMonths()
+        api!.getMillageMonths()
         
         refreshControlSetup()
         
-  
-  
+        
     }
     
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return receiptMonthsLists.count
+        return MonthsLists.count
         
     }
     
@@ -45,30 +44,30 @@ class ReceiptMonthsViewController: UIViewController, UITableViewDataSource, UITa
         
         let cell: MonthsTableViewCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as MonthsTableViewCell;
         
-        let receipt = self.receiptMonthsLists[indexPath.row]
+        let receipt = self.MonthsLists[indexPath.row]
         
         cell.receiptMonth.text = receipt.receiptMonth + " " +  "(" + String (receipt.receiptCount) + ")"
         
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = UIColor(netHex:0x5BCAFF)
             cell.receiptBlockImage.backgroundColor = UIColor(netHex:0x55EFCB)
-
+            
         } else {
             cell.backgroundColor = UIColor(netHex:0xE0F8D8)
             cell.receiptBlockImage.backgroundColor = UIColor(netHex:0x81F3FD)
             cell.receiptMonth.textColor = UIColor(netHex:0x34AADC)
         }
         
-      
+        
         
         
         return cell
     }
     
-
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        self.receiptMonthsTableView.deselectRowAtIndexPath(indexPath, animated: true)
+        self.milllageMonthsTableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     func didRecieveJsonArray(results: NSArray) {
@@ -76,22 +75,22 @@ class ReceiptMonthsViewController: UIViewController, UITableViewDataSource, UITa
         ProgressView.shared.hideProgressView()
         
         if(results.count != 0) {
-        
-        var resultsArr: NSArray = results[0] as? NSArray ?? []
-        self.receiptMonthsLists = MonthsModel.getReceiptsMonth(results);
-        self.receiptMonthsTableView!.reloadData()
+            
+            var resultsArr: NSArray = results[0] as? NSArray ?? []
+            self.MonthsLists = MonthsModel.getReceiptsMonth(results);
+            self.milllageMonthsTableView!.reloadData()
         }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "receiptOverviewSegue" {
+        if segue.identifier == "millageDetailsSegue" {
             
-        var currentMonthIndex = receiptMonthsTableView!.indexPathForSelectedRow()!.row
-        var selectedMonth = self.receiptMonthsLists[currentMonthIndex]
-
-        var receiptOverviewViewController: MainViewController = segue.destinationViewController as MainViewController
-        receiptOverviewViewController.filterDate = selectedMonth.receiptMonth;
+            var currentMonthIndex = milllageMonthsTableView!.indexPathForSelectedRow()!.row
+            var selectedMonth = self.MonthsLists[currentMonthIndex]
+            
+            var millageDetailsViewController: MillageDetailsViewController = segue.destinationViewController as MillageDetailsViewController
+            millageDetailsViewController.filterDate = selectedMonth.receiptMonth;
             
         }
     }
@@ -100,21 +99,16 @@ class ReceiptMonthsViewController: UIViewController, UITableViewDataSource, UITa
         self.refreshControl = UIRefreshControl()
         self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refersh")
         self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
-        self.receiptMonthsTableView.addSubview(refreshControl)
+        self.milllageMonthsTableView.addSubview(refreshControl)
     }
     
     func refresh(sender:AnyObject)
     {
-        api!.getReceiptMonths();
-        self.receiptMonthsTableView!.reloadData()
+        api!.getMillageMonths()
+        self.milllageMonthsTableView!.reloadData()
         self.refreshControl.endRefreshing()
     }
-    
-    
-        
+
+
+
 }
-
-    
-
- 
-

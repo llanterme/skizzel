@@ -1,7 +1,7 @@
 
 import Foundation
 
-class ReceiptMonthsModel {
+class MonthsModel {
     
     
     var receiptMonth: String
@@ -13,9 +13,9 @@ class ReceiptMonthsModel {
     
     }
     
-    class func getReceiptsMonth(allResults: NSArray) -> [ReceiptMonthsModel] {
+    class func getReceiptsMonth(allResults: NSArray) -> [MonthsModel] {
         
-        var receiptMonthsList = [ReceiptMonthsModel]()
+        var receiptMonthsList = [MonthsModel]()
         
         if allResults.count > 0 {
             
@@ -24,7 +24,7 @@ class ReceiptMonthsModel {
                 let month = item["ReceiptMonth"] as? String ?? ""
                 let count = item["MonthCount"] as? Int ?? 0
                 
-                let newListItem = ReceiptMonthsModel(receiptMonth:month, receiptCount:count );
+                let newListItem = MonthsModel(receiptMonth:month, receiptCount:count );
                 
                 receiptMonthsList.append(newListItem)
             }

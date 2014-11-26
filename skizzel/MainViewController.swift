@@ -104,11 +104,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         ProgressView.shared.hideProgressView()
        
-        //save categories to nsdefaults;
-        var userCategories:NSArray = results["UserOverView"]?["CategoriesList"] as? NSArray ?? []
-        Utils.setUserCategories(userCategories);
         
-         var resultsArr: NSArray = results["UserOverView"]?["ReceiptList"] as? NSArray ?? []
+         var resultsArr: NSArray = results["ReceiptList"] as? NSArray ?? []
         
          self.receiptLists = ReceiptModel.getReceipts(resultsArr);
          self.receiptTable!.reloadData()

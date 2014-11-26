@@ -5,11 +5,11 @@ import CoreLocation
 class MillageViewController: UIViewController, CLLocationManagerDelegate,APIControllerProtocol,listPickProtcol {
 
     
-    @IBOutlet weak var finishButton: UIBarButtonItem!
     
-    @IBOutlet weak var startAddress: UITextView!
-    @IBOutlet weak var startLong: UILabel!
     @IBOutlet weak var startLat: UILabel!
+    @IBOutlet weak var startAddress: UITextView!
+
+    @IBOutlet weak var startLong: UILabel!
     @IBOutlet weak var startTime: UILabel!
 
     
@@ -21,6 +21,8 @@ class MillageViewController: UIViewController, CLLocationManagerDelegate,APICont
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var endButton: UIButton!
 
+    
+    @IBOutlet weak var finishButton: UIBarButtonItem!
     
     let locationManager = CLLocationManager()
     var geocoder : CLGeocoder = CLGeocoder()
@@ -197,16 +199,22 @@ class MillageViewController: UIViewController, CLLocationManagerDelegate,APICont
         userCategories = category
         millageAlias = alias
         
-         finishButton.enabled = true
-        println(millageAlias)
-                println(userCategories.category)
-         println(userCategories.categoryId)
+        if(userCategories.categoryId != 0) {
+        
+        finishButton.enabled = true
+        }
+        
         
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "millageCategoryPickerSegue" {
+            
+            self.userCategories = CategoriesModel(categoryId: 0,category: "")
+            self.millageAlias = ""
+            finishButton.enabled = false
+            
             let listPickerViewController: MillageCategoriesPickerViewController = segue.destinationViewController as MillageCategoriesPickerViewController
             listPickerViewController.delegate = self;
         }
@@ -218,7 +226,10 @@ class MillageViewController: UIViewController, CLLocationManagerDelegate,APICont
         return timestamp
     }
 
+
     @IBAction func saveMilage(sender: AnyObject) {
+        
+         ProgressView.shared.showProgressView(view)
         
         let categoryId = String (userCategories.categoryId)
         let userId = Utils.checkRegisteredUser()
@@ -228,7 +239,6 @@ class MillageViewController: UIViewController, CLLocationManagerDelegate,APICont
         let userEndLong = stopLong.text
         
         api?.createMillage(categoryId, userId: userId, alias: millageAlias, startLat: userStartLat!, startLong: userStartLong!, endLat: userEndLat!, endLong: userEndLong!)
-        
     }
     
     func didRecieveJson(results: NSDictionary) {
@@ -242,6 +252,12 @@ class MillageViewController: UIViewController, CLLocationManagerDelegate,APICont
             finishButton.enabled = false
             clearEndLocation()
             clearStartLocation()
+            
+            let alert = UIAlertView()
+            alert.title = "Alert"
+            alert.message = "Millage created sucessfully!"
+            alert.addButtonWithTitle("OK")
+            alert.show()
             
         } else {
             let alert = UIAlertView()

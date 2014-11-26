@@ -11,3 +11,9 @@ extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
 }
+
+extension Double {
+    func toString() -> String {
+        return String(format: "%.2f",self)
+    }
+}

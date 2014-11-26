@@ -41,6 +41,7 @@ class APIController {
         
     }
     
+    
     func getMillageList(selectedMonth:String) {
         
         var manager = Manager.sharedInstance;
@@ -48,10 +49,12 @@ class APIController {
         
         Alamofire.request(.GET, Utils.getPlistValue("API") + "/MillageOverview/" + self.userId + "/" + selectedMonth, parameters: nil)
             .responseJSON { (request, response, JSON, error) in
-                
+                println(error)
                 if(error == nil) {
                     let jsonResults = JSON as Dictionary<String, NSObject>
                     self.delegate.didRecieveJson!(jsonResults)
+                } else {
+                    self.delegate.didRecieveError!(error!);
                 }
         }
         
@@ -86,6 +89,7 @@ class APIController {
         }
         
     }
+    
     
     func authenticateUser(user: UserModel) {
         
