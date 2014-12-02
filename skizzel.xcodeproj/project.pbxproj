@@ -63,6 +63,7 @@
 		A3C6D4C719EEAF77009BAF1E /* UploadImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C6D4C619EEAF77009BAF1E /* UploadImagesViewController.swift */; };
 		A3C7B10719EBC60800F2B3FD /* ReceiptImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C7B10619EBC60800F2B3FD /* ReceiptImageDetailViewController.swift */; };
 		A3C95EEB1A2622540095D882 /* arrow-24-xxl.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C95EEA1A2622540095D882 /* arrow-24-xxl.png */; };
+		A3D6744B1A2E032D00478514 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D6744A1A2E032D00478514 /* MapViewController.swift */; };
 		A3E0C9E119F5682B00E05705 /* 111-user.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E0C9E019F5682B00E05705 /* 111-user.png */; };
 		A3E41F6519FCB72400955800 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E41F6419FCB72400955800 /* SideBarTableViewController.swift */; };
 		A3E41F6919FCC47200955800 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E41F6819FCC47200955800 /* SideBar.swift */; };
@@ -166,6 +167,7 @@
 		A3C6D4C619EEAF77009BAF1E /* UploadImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImagesViewController.swift; sourceTree = "<group>"; };
 		A3C7B10619EBC60800F2B3FD /* ReceiptImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptImageDetailViewController.swift; sourceTree = "<group>"; };
 		A3C95EEA1A2622540095D882 /* arrow-24-xxl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-24-xxl.png"; sourceTree = "<group>"; };
+		A3D6744A1A2E032D00478514 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A3E0C9E019F5682B00E05705 /* 111-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "111-user.png"; sourceTree = "<group>"; };
 		A3E41F6419FCB72400955800 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 		A3E41F6819FCC47200955800 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				A37534E41A24BFB600F1F005 /* MillageMonthsViewController.swift */,
 				A37534E61A24C38F00F1F005 /* MillageDetailsViewController.swift */,
 				A39F5D5719F9467B00A486F4 /* ReceiptMonthsViewController.swift */,
+				A308F4A71A2DBB8A003739FC /* ReceiptCategoryViewController.swift */,
 				A30C768A19E6AE0200212B35 /* MainViewController.swift */,
 				A3C49E1319E96B4700F1F2CB /* ReceiptImagesViewController.swift */,
 				A3C7B10619EBC60800F2B3FD /* ReceiptImageDetailViewController.swift */,
@@ -297,8 +300,8 @@
 				A3C6D4C619EEAF77009BAF1E /* UploadImagesViewController.swift */,
 				A3BD5AA119FFDC91003E9DD0 /* MillageViewController.swift */,
 				A3630BC81A21E95400273CBE /* MillageCategoriesPickerViewController.swift */,
+				A3D6744A1A2E032D00478514 /* MapViewController.swift */,
 				A3BD5A9319FF8BD0003E9DD0 /* SettingsViewController.swift */,
-				A308F4A71A2DBB8A003739FC /* ReceiptCategoryViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				A3C49E1419E96B4700F1F2CB /* ReceiptImagesViewController.swift in Sources */,
 				A3E41F6519FCB72400955800 /* SideBarTableViewController.swift in Sources */,
 				A307581219E5724E00780C45 /* APIController.swift in Sources */,
+				A3D6744B1A2E032D00478514 /* MapViewController.swift in Sources */,
 				A3630BCB1A21EA3800273CBE /* MillageCategoriesCell.swift in Sources */,
 				A37E86B919E6CD70004A8C0F /* MainViewTableViewCell.swift in Sources */,
 				A3BD5A9419FF8BD0003E9DD0 /* SettingsViewController.swift in Sources */,

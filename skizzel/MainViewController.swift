@@ -8,6 +8,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var receiptLists = [ReceiptModel]()
     var filterDate: String?
     var selectedCategory: Int?
+    var selectedCategoryName:String?
     
     var refreshControl:UIRefreshControl!
 
@@ -24,7 +25,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         api!.getReceiptLists(Utils.reformatSelectedMonth(filterDate!), selectedCategory: selectedCategory!);
         refreshControlSetup()
         
-        self.title = filterDate;
+        self.title = selectedCategoryName!
         
         
         
@@ -51,7 +52,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         cell.receiptAlias.text = receipt.alias
         cell.receiptDateCreated.text = receipt.dateCreated
-        cell.receiptCategpry.text = receipt.category
         
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = UIColor(netHex:0x5BCAFF)
@@ -61,7 +61,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell.backgroundColor = UIColor(netHex:0xE0F8D8)
             cell.receiptBlockImage.backgroundColor = UIColor(netHex:0x81F3FD)
             cell.receiptAlias.textColor = UIColor(netHex:0x34AADC)
-            cell.receiptCategpry.textColor = UIColor(netHex:0x34AADC)
             cell.receiptDateCreated.textColor = UIColor(netHex:0x34AADC)
         }
 

@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>API</key>
-	<string>http://10.211.55.3/skizzel/RestService.svc</string>
+	<string>http://www.flickit.co.za/RestService.svc</string>
 </dict>
 </plist>

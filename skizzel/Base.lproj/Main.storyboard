@@ -210,7 +210,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ReceiptMonthsCell" rowHeight="75" id="io3-iX-nPj" customClass="MonthsTableViewCell" customModule="skizzel" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReceiptMonthsCell" rowHeight="75" id="io3-iX-nPj" customClass="MonthsTableViewCell" customModule="skizzel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="io3-iX-nPj" id="RXF-bj-AYQ">
@@ -267,12 +267,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" sectionHeaderHeight="22" sectionFooterHeight="22" id="o9H-8w-Bks">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="634"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="77" sectionHeaderHeight="22" sectionFooterHeight="22" id="o9H-8w-Bks">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ReceiptCategoryCell" rowHeight="75" id="3cF-4Q-qWm" customClass="ReceiptCategoryCell" customModule="skizzel" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReceiptCategoryCell" rowHeight="75" id="3cF-4Q-qWm" customClass="ReceiptCategoryCell" customModule="skizzel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="247" width="320" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3cF-4Q-qWm" id="Ch3-Z3-Lpw">
@@ -335,7 +335,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ReceiptListCell" rowHeight="75" id="XPW-1a-j7Z" customClass="MainViewTableViewCell" customModule="skizzel" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReceiptListCell" rowHeight="75" id="XPW-1a-j7Z" customClass="MainViewTableViewCell" customModule="skizzel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XPW-1a-j7Z" id="uQe-9W-Maq">
@@ -359,20 +359,16 @@
                                                     <rect key="frame" x="13" y="27" width="30" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fkw-to-ENd">
-                                                    <rect key="frame" x="170" y="16" width="216" height="31"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-24-xxl.png" id="Rfr-uN-S9e">
+                                                    <rect key="frame" x="266" y="23" width="54" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                                    <color key="highlightedColor" red="0.36078432199999999" green="0.7254902124" blue="0.76470595600000002" alpha="1" colorSpace="deviceRGB"/>
-                                                </label>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.40000000000000002" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="receiptAlias" destination="qZr-bR-54r" id="71r-oo-2e8"/>
                                             <outlet property="receiptBlockImage" destination="sRq-AP-hjx" id="T5R-1z-uHI"/>
-                                            <outlet property="receiptCategpry" destination="fkw-to-ENd" id="OhS-yO-zms"/>
                                             <outlet property="receiptDateCreated" destination="RJ4-dM-RhJ" id="jRU-jV-T6b"/>
                                             <segue destination="gnj-ha-JPW" kind="push" identifier="receiptImagesViewSegue" id="PUC-hp-948"/>
                                         </connections>
@@ -732,17 +728,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="81" sectionHeaderHeight="22" sectionFooterHeight="22" id="Zo5-Cg-5od">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="81" sectionHeaderHeight="22" sectionFooterHeight="22" id="Zo5-Cg-5od">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zLU-1x-Lc2">
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="highlightedColor" red="0.36078432199999999" green="0.7254902124" blue="0.76470595600000002" alpha="1" colorSpace="deviceRGB"/>
-                                </label>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MillageListCell" rowHeight="75" id="jNk-Ch-4Bs" customClass="MillageDetailsCell" customModule="skizzel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -782,6 +772,10 @@
                                                     <rect key="frame" x="11" y="28" width="30" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-24-xxl.png" id="JKp-To-cdW">
+                                                    <rect key="frame" x="258" y="23" width="54" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.40000000000000002" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -791,6 +785,7 @@
                                             <outlet property="millageCategory" destination="l65-3Y-uIP" id="zOh-ed-jaz"/>
                                             <outlet property="millageDate" destination="AaQ-R6-uo1" id="W8A-l0-xct"/>
                                             <outlet property="millageTotal" destination="Em4-nG-Rm3" id="uVv-JK-Y2R"/>
+                                            <segue destination="w4L-O4-AiM" kind="push" identifier="mapViewSegue" id="H8x-ew-jah"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -809,7 +804,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VUb-30-M8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-529" y="2177"/>
+            <point key="canvasLocation" x="-980" y="2538"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="2c7-3T-B7G">
+            <objects>
+                <viewController id="w4L-O4-AiM" customClass="MapViewController" customModule="skizzel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gHg-Ih-cjb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="qmC-AJ-35r">
+                                <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="w4L-O4-AiM" id="7cS-sN-kem"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EL1-eD-zMG"/>
+                    <connections>
+                        <outlet property="myMap" destination="qmC-AJ-35r" id="bc4-bT-aYn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z1g-6P-ssg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-544" y="2538"/>
         </scene>
         <!--Millage View Controller-->
         <scene sceneID="XJg-cA-pjD">
@@ -1066,7 +1088,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUG-rH-215" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="62" y="2533"/>
+            <point key="canvasLocation" x="62" y="2538"/>
         </scene>
         <!--Receipt Images View Controller-->
         <scene sceneID="Yaf-60-H7Q">
@@ -1189,7 +1211,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="GbK-d8-spk"/>
         <segue reference="LIw-tk-udh"/>
+        <segue reference="XrJ-QW-nkB"/>
     </inferredMetricsTieBreakers>
 </document>

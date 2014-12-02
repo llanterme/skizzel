@@ -102,6 +102,7 @@ class ReceiptCategoryViewController: UIViewController, UITableViewDataSource, UI
             var receiptOverviewViewController: MainViewController = segue.destinationViewController as MainViewController
             receiptOverviewViewController.filterDate = self.filterDate
             receiptOverviewViewController.selectedCategory = selectedCategory.categoryId
+            receiptOverviewViewController.selectedCategoryName = selectedCategory.category
             
             
         }
