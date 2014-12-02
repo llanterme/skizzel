@@ -23,6 +23,9 @@
 		A307582219E57BDF00780C45 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = A307582119E57BDF00780C45 /* button.png */; };
 		A307582419E57C0700780C45 /* register.png in Resources */ = {isa = PBXBuildFile; fileRef = A307582319E57C0700780C45 /* register.png */; };
 		A307582619E57FAB00780C45 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A307582519E57FAB00780C45 /* logo.png */; };
+		A308F4A81A2DBB8A003739FC /* ReceiptCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A308F4A71A2DBB8A003739FC /* ReceiptCategoryViewController.swift */; };
+		A308F4AC1A2DBC65003739FC /* ReceiptCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A308F4AB1A2DBC65003739FC /* ReceiptCategoryCell.swift */; };
+		A308F4AE1A2DBD92003739FC /* CategoryCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A308F4AD1A2DBD92003739FC /* CategoryCountModel.swift */; };
 		A30C768819E678D500212B35 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C768719E678D500212B35 /* UserModel.swift */; };
 		A30C768B19E6AE0200212B35 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C768A19E6AE0200212B35 /* MainViewController.swift */; };
 		A30C768F19E6B58200212B35 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C768E19E6B58200212B35 /* RegisterViewController.swift */; };
@@ -59,6 +62,7 @@
 		A3C6D4C219EEA2B8009BAF1E /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C6D4C019EEA2B8009BAF1E /* ViewControllerUtils.swift */; };
 		A3C6D4C719EEAF77009BAF1E /* UploadImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C6D4C619EEAF77009BAF1E /* UploadImagesViewController.swift */; };
 		A3C7B10719EBC60800F2B3FD /* ReceiptImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C7B10619EBC60800F2B3FD /* ReceiptImageDetailViewController.swift */; };
+		A3C95EEB1A2622540095D882 /* arrow-24-xxl.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C95EEA1A2622540095D882 /* arrow-24-xxl.png */; };
 		A3E0C9E119F5682B00E05705 /* 111-user.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E0C9E019F5682B00E05705 /* 111-user.png */; };
 		A3E41F6519FCB72400955800 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E41F6419FCB72400955800 /* SideBarTableViewController.swift */; };
 		A3E41F6919FCC47200955800 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E41F6819FCC47200955800 /* SideBar.swift */; };
@@ -122,6 +126,9 @@
 		A307582119E57BDF00780C45 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		A307582319E57C0700780C45 /* register.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register.png; sourceTree = "<group>"; };
 		A307582519E57FAB00780C45 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		A308F4A71A2DBB8A003739FC /* ReceiptCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptCategoryViewController.swift; sourceTree = "<group>"; };
+		A308F4AB1A2DBC65003739FC /* ReceiptCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptCategoryCell.swift; sourceTree = "<group>"; };
+		A308F4AD1A2DBD92003739FC /* CategoryCountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCountModel.swift; sourceTree = "<group>"; };
 		A30C768719E678D500212B35 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		A30C768A19E6AE0200212B35 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A30C768E19E6B58200212B35 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +165,7 @@
 		A3C6D4C019EEA2B8009BAF1E /* ViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
 		A3C6D4C619EEAF77009BAF1E /* UploadImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImagesViewController.swift; sourceTree = "<group>"; };
 		A3C7B10619EBC60800F2B3FD /* ReceiptImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptImageDetailViewController.swift; sourceTree = "<group>"; };
+		A3C95EEA1A2622540095D882 /* arrow-24-xxl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-24-xxl.png"; sourceTree = "<group>"; };
 		A3E0C9E019F5682B00E05705 /* 111-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "111-user.png"; sourceTree = "<group>"; };
 		A3E41F6419FCB72400955800 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 		A3E41F6819FCC47200955800 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
@@ -224,6 +232,7 @@
 		A30757DF19E568DB00780C45 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A3C95EEA1A2622540095D882 /* arrow-24-xxl.png */,
 				A30E38441A05237F000F8D12 /* loading_image_placeholder.gif */,
 				A3BD5A9D19FFDB4F003E9DD0 /* 1.png */,
 				A3BD5A9E19FFDB4F003E9DD0 /* 2.png */,
@@ -289,6 +298,7 @@
 				A3BD5AA119FFDC91003E9DD0 /* MillageViewController.swift */,
 				A3630BC81A21E95400273CBE /* MillageCategoriesPickerViewController.swift */,
 				A3BD5A9319FF8BD0003E9DD0 /* SettingsViewController.swift */,
+				A308F4A71A2DBB8A003739FC /* ReceiptCategoryViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -311,6 +321,7 @@
 				A31D9A7519EE50EB0058C6DC /* CategoriesModel.swift */,
 				A39F5D5B19F946E500A486F4 /* MonthsModel.swift */,
 				A37534EC1A24C59400F1F005 /* MillageModel.swift */,
+				A308F4AD1A2DBD92003739FC /* CategoryCountModel.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -340,6 +351,7 @@
 				A39F5D5D19F9490E00A486F4 /* MonthsTableViewCell.swift */,
 				A3630BCA1A21EA3800273CBE /* MillageCategoriesCell.swift */,
 				A373DDA21A24C8B6008B88A1 /* MillageDetailsCell.swift */,
+				A308F4AB1A2DBC65003739FC /* ReceiptCategoryCell.swift */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -448,6 +460,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C95EEB1A2622540095D882 /* arrow-24-xxl.png in Resources */,
 				A307580219E568F500780C45 /* config.plist in Resources */,
 				A307582219E57BDF00780C45 /* button.png in Resources */,
 				A3BD5AA019FFDB4F003E9DD0 /* 2.png in Resources */,
@@ -483,6 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A308F4AC1A2DBC65003739FC /* ReceiptCategoryCell.swift in Sources */,
 				A31D9A7619EE50EB0058C6DC /* CategoriesModel.swift in Sources */,
 				A3C6D4C219EEA2B8009BAF1E /* ViewControllerUtils.swift in Sources */,
 				A3C6D4C719EEAF77009BAF1E /* UploadImagesViewController.swift in Sources */,
@@ -493,6 +507,7 @@
 				A3630BCB1A21EA3800273CBE /* MillageCategoriesCell.swift in Sources */,
 				A37E86B919E6CD70004A8C0F /* MainViewTableViewCell.swift in Sources */,
 				A3BD5A9419FF8BD0003E9DD0 /* SettingsViewController.swift in Sources */,
+				A308F4A81A2DBB8A003739FC /* ReceiptCategoryViewController.swift in Sources */,
 				A3C49E0E19E965D100F1F2CB /* ReceiptImageModel.swift in Sources */,
 				A37534E51A24BFB600F1F005 /* MillageMonthsViewController.swift in Sources */,
 				A3C6D4C119EEA2B8009BAF1E /* Extensions.swift in Sources */,
@@ -500,6 +515,7 @@
 				A30757E419E568DB00780C45 /* ViewController.swift in Sources */,
 				A3C49E1619E96C1C00F1F2CB /* ReceiptImagesCollectionViewCell.swift in Sources */,
 				A37534E71A24C38F00F1F005 /* MillageDetailsViewController.swift in Sources */,
+				A308F4AE1A2DBD92003739FC /* CategoryCountModel.swift in Sources */,
 				A39F5D5C19F946E500A486F4 /* MonthsModel.swift in Sources */,
 				A390E1931A011A3C00D3F4B9 /* SwiftyJSON.swift in Sources */,
 				A30C768F19E6B58200212B35 /* RegisterViewController.swift in Sources */,

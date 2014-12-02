@@ -78,6 +78,7 @@ class ReceiptMonthsViewController: UIViewController, UITableViewDataSource, UITa
         if(results.count != 0) {
         
         var resultsArr: NSArray = results[0] as? NSArray ?? []
+
         self.receiptMonthsLists = MonthsModel.getReceiptsMonth(results);
         self.receiptMonthsTableView!.reloadData()
         }
@@ -85,13 +86,13 @@ class ReceiptMonthsViewController: UIViewController, UITableViewDataSource, UITa
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "receiptOverviewSegue" {
+        if segue.identifier == "categoryOverviewSegue" {
             
         var currentMonthIndex = receiptMonthsTableView!.indexPathForSelectedRow()!.row
         var selectedMonth = self.receiptMonthsLists[currentMonthIndex]
 
-        var receiptOverviewViewController: MainViewController = segue.destinationViewController as MainViewController
-        receiptOverviewViewController.filterDate = selectedMonth.receiptMonth;
+        var categoriesOverviewViewController: ReceiptCategoryViewController = segue.destinationViewController as ReceiptCategoryViewController
+        categoriesOverviewViewController.filterDate = selectedMonth.receiptMonth;
             
         }
     }

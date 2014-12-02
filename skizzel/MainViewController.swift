@@ -7,6 +7,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let kCellIdentifier: String = "ReceiptListCell"
     var receiptLists = [ReceiptModel]()
     var filterDate: String?
+    var selectedCategory: Int?
+    
     var refreshControl:UIRefreshControl!
 
     @IBOutlet weak var receiptTable: UITableView!
@@ -19,7 +21,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         ProgressView.shared.showProgressView(view)
 
         api = APIController(delegate: self)
-        api!.getReceiptLists(Utils.reformatSelectedMonth(filterDate!));
+        api!.getReceiptLists(Utils.reformatSelectedMonth(filterDate!), selectedCategory: selectedCategory!);
         refreshControlSetup()
         
         self.title = filterDate;
@@ -125,7 +127,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func refresh(sender:AnyObject)
     {
-        api!.getReceiptLists(Utils.reformatSelectedMonth(filterDate!));
+        api!.getReceiptLists(Utils.reformatSelectedMonth(filterDate!), selectedCategory: selectedCategory!);
         self.receiptTable!.reloadData()
         self.refreshControl.endRefreshing()
     }

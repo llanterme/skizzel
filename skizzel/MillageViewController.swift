@@ -199,9 +199,9 @@ class MillageViewController: UIViewController, CLLocationManagerDelegate,APICont
         userCategories = category
         millageAlias = alias
         
-        if(userCategories.categoryId != 0) {
+        if(userCategories.categoryId != 0 && alias != "") {
         
-        finishButton.enabled = true
+            finishButton.enabled = true
         }
         
         

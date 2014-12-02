@@ -47,7 +47,6 @@ class MillageCategoriesPickerViewController: UIViewController, UITableViewDataSo
     }
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         
-    //    tableView.deselectRowAtIndexPath(indexPath, animated: true);
         
         var currentCategory = self.categoriesList[indexPath.row] as CategoriesModel;
         selectedCategory = currentCategory
@@ -74,10 +73,11 @@ class MillageCategoriesPickerViewController: UIViewController, UITableViewDataSo
         
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = UIColor(netHex:0x5BCAFF)
+             cell.categoryName.textColor = UIColor(netHex:0xFFFFFF)
             
         } else {
             cell.backgroundColor = UIColor(netHex:0xE0F8D8)
-        
+             cell.categoryName.textColor = UIColor(netHex:0x34AADC)
           
         }
 
