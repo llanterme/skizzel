@@ -1,7 +1,7 @@
 
-import UIkit
+import UIKit
 
-class ReceiptCategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIControllerProtocol {
+class MillageCategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIControllerProtocol {
     
     var api : APIController?
     let kCellIdentifier: String = "ReceiptCategoryCell"
@@ -9,8 +9,9 @@ class ReceiptCategoryViewController: UIViewController, UITableViewDataSource, UI
     var refreshControl:UIRefreshControl!
     var filterDate: String?
     
+    
+    @IBOutlet weak var categoryTableView: UITableView!
 
-    @IBOutlet weak var receiptCategoryTableView: UITableView!
     
     override func viewDidLoad() {
         
@@ -18,7 +19,7 @@ class ReceiptCategoryViewController: UIViewController, UITableViewDataSource, UI
         
         ProgressView.shared.showProgressView(view)
         api = APIController(delegate: self)
-        api!.getCategoryCount(Utils.reformatSelectedMonth(filterDate!), type: "receipt")
+        api!.getCategoryCount(Utils.reformatSelectedMonth(filterDate!), type: "millage")
         refreshControlSetup()
         
         self.title = filterDate;
@@ -60,33 +61,33 @@ class ReceiptCategoryViewController: UIViewController, UITableViewDataSource, UI
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        self.receiptCategoryTableView.deselectRowAtIndexPath(indexPath, animated: true)
+        self.categoryTableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     func refreshControlSetup(){
         self.refreshControl = UIRefreshControl()
         self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refersh")
         self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
-        self.receiptCategoryTableView.addSubview(refreshControl)
+        self.categoryTableView.addSubview(refreshControl)
     }
     
     func refresh(sender:AnyObject)
     {
         api!.getCategoryCount(Utils.reformatSelectedMonth(filterDate!), type: "receipt")
-        self.receiptCategoryTableView!.reloadData()
+        self.categoryTableView!.reloadData()
         self.refreshControl.endRefreshing()
     }
     
     func didRecieveJsonArray(results: NSArray) {
         
         ProgressView.shared.hideProgressView()
-      
-    
-         if(results.count != 0) {
         
-        var resultsArr: NSArray = results
-        self.categoryList = CategoryCountModel.getCategoryCount(resultsArr);
-        self.receiptCategoryTableView!.reloadData()
+        
+        if(results.count != 0) {
+            
+            var resultsArr: NSArray = results
+            self.categoryList = CategoryCountModel.getCategoryCount(resultsArr);
+            self.categoryTableView!.reloadData()
         }
         
         
@@ -94,20 +95,18 @@ class ReceiptCategoryViewController: UIViewController, UITableViewDataSource, UI
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "receiptOverviewSegue" {
+        if segue.identifier == "millageDetailsSegue" {
             
-            var currentCategoryIndex = receiptCategoryTableView!.indexPathForSelectedRow()!.row
+            var currentCategoryIndex = categoryTableView!.indexPathForSelectedRow()!.row
             var selectedCategory = self.categoryList[currentCategoryIndex]
             
-            var receiptOverviewViewController: MainViewController = segue.destinationViewController as MainViewController
-            receiptOverviewViewController.filterDate = self.filterDate
-            receiptOverviewViewController.selectedCategory = selectedCategory.categoryId
-            receiptOverviewViewController.selectedCategoryName = selectedCategory.category
+            var millageOverviewViewController: MillageDetailsViewController = segue.destinationViewController as MillageDetailsViewController
+            millageOverviewViewController.filterDate = self.filterDate
+            millageOverviewViewController.selectedCategory = selectedCategory.categoryId
+            millageOverviewViewController.selectedCategoryName = selectedCategory.category
             
             
         }
     }
-    
-
-
 }
+

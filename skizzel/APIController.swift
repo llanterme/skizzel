@@ -44,12 +44,14 @@ class APIController {
     }
     
     
-    func getMillageList(selectedMonth:String) {
+    func getMillageList(selectedMonth:String,selectedCategory:Int) {
+        
+          var category = String(selectedCategory)
         
         var manager = Manager.sharedInstance;
         manager.session.configuration.HTTPAdditionalHeaders = ["Content-Type": "application/json"]
         
-        Alamofire.request(.GET, Utils.getPlistValue("API") + "/MillageOverview/" + self.userId + "/" + selectedMonth, parameters: nil)
+        Alamofire.request(.GET, Utils.getPlistValue("API") + "/MillageOverview/" + self.userId + "/" + selectedMonth + "/" + category, parameters: nil)
             .responseJSON { (request, response, JSON, error) in
                 println(error)
                 if(error == nil) {
@@ -92,13 +94,14 @@ class APIController {
         
     }
     
-    func getCategoryCount(selectedMonth:String) {
+    func getCategoryCount(selectedMonth:String, type:String) {
         
         var manager = Manager.sharedInstance;
         manager.session.configuration.HTTPAdditionalHeaders = ["Content-Type": "application/json"]
         
-        Alamofire.request(.GET, Utils.getPlistValue("API") + "/UserReceiptCategory/" + self.userId + "/" + selectedMonth, parameters: nil)
+        Alamofire.request(.GET, Utils.getPlistValue("API") + "/UserCategoryCount/" + self.userId + "/" + selectedMonth + "/" + type, parameters: nil)
             .responseJSON { (request, response, JSON, error) in
+                println(error)
                 if(error == nil) {
                     let jsonResults = JSON as NSArray
                     self.delegate.didRecieveJsonArray!(jsonResults)

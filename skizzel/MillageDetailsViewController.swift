@@ -1,5 +1,6 @@
 
 import UIKit
+import CoreLocation
 
 class MillageDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIControllerProtocol {
     
@@ -8,6 +9,9 @@ class MillageDetailsViewController: UIViewController, UITableViewDataSource, UIT
     var millageLists = [MillageModel]()
     var filterDate: String?
     var refreshControl:UIRefreshControl!
+    var selectedCategory: Int?
+    var selectedCategoryName:String?
+
     
     
     @IBOutlet weak var millageTableView: UITableView!
@@ -19,7 +23,7 @@ class MillageDetailsViewController: UIViewController, UITableViewDataSource, UIT
         ProgressView.shared.showProgressView(view)
         
         api = APIController(delegate: self)
-        api!.getMillageList(Utils.reformatSelectedMonth(filterDate!))
+        api!.getMillageList(Utils.reformatSelectedMonth(filterDate!), selectedCategory: selectedCategory!)
      
         
         self.title = filterDate;
@@ -110,9 +114,28 @@ class MillageDetailsViewController: UIViewController, UITableViewDataSource, UIT
     
     func refresh(sender:AnyObject)
     {
-        api!.getMillageList(Utils.reformatSelectedMonth(filterDate!));
+         api!.getMillageList(Utils.reformatSelectedMonth(filterDate!), selectedCategory: selectedCategory!)
         self.millageTableView!.reloadData()
         self.refreshControl.endRefreshing()
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "mapViewSegue" {
+            
+            var currentIndex = millageTableView!.indexPathForSelectedRow()!.row
+            var selectedMillage = self.millageLists[currentIndex]
+            
+            var mapViewController: MapViewController = segue.destinationViewController as MapViewController
+            
+            mapViewController.startLat =  selectedMillage.startLat
+            mapViewController.startLong =  selectedMillage.startLong
+            mapViewController.stopLat =  selectedMillage.stopLat
+            mapViewController.stopLong =  selectedMillage.stopLong
+            
+            
+        }
     }
     
     

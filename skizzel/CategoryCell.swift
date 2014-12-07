@@ -1,8 +1,8 @@
 import UIkit
 
-class ReceiptCategoryCell: UITableViewCell {
+class CategoryCell: UITableViewCell {
     
-    @IBOutlet weak var receiptCategory: UILabel!
+    @IBOutlet weak var category: UILabel!
     @IBOutlet weak var blockImage: UIImageView!
     
     override func awakeFromNib() {

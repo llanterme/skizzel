@@ -23,7 +23,7 @@ class CategoryCountModel {
             for item in allResults {
                 
                 let categoryId = item["CategoryId"] as? Int ?? 0
-                let category = item["ReceiptCategory"] as? String ?? ""
+                let category = item["Category"] as? String ?? ""
                 let categoryCount = item["CategoryCount"] as? Int ?? 0
                 
                 let newListItem = CategoryCountModel(categoryId: categoryId, category: category,categoryCount:categoryCount);

@@ -84,12 +84,12 @@ class MillageMonthsViewController: UIViewController, UITableViewDataSource, UITa
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "millageDetailsSegue" {
+        if segue.identifier == "MillageCategoryOverviewSegue" {
             
             var currentMonthIndex = milllageMonthsTableView!.indexPathForSelectedRow()!.row
             var selectedMonth = self.MonthsLists[currentMonthIndex]
             
-            var millageDetailsViewController: MillageDetailsViewController = segue.destinationViewController as MillageDetailsViewController
+            var millageDetailsViewController: MillageCategoryViewController = segue.destinationViewController as MillageCategoryViewController
             millageDetailsViewController.filterDate = selectedMonth.receiptMonth;
             
         }

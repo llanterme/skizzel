@@ -6,6 +6,12 @@ class MapViewController: UIViewController,MKMapViewDelegate {
 
     @IBOutlet weak var myMap: MKMapView!
     var myRoute : MKRoute?
+    var startLat:CLLocationDegrees?
+    var startLong:CLLocationDegrees?
+    var stopLat:CLLocationDegrees?
+    var stopLong:CLLocationDegrees?
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,12 +19,15 @@ class MapViewController: UIViewController,MKMapViewDelegate {
         var point1 = MKPointAnnotation()
         var point2 = MKPointAnnotation()
         
-        point1.coordinate = CLLocationCoordinate2DMake(25.0305, 121.5360)
+        myMap.mapType = MKMapType.Hybrid
+
+        
+        point1.coordinate = CLLocationCoordinate2DMake(startLat!, startLong!)
         point1.title = "Taipei"
         point1.subtitle = "Taiwan"
         myMap.addAnnotation(point1)
         
-        point2.coordinate = CLLocationCoordinate2DMake(24.9511, 121.2358)
+        point2.coordinate = CLLocationCoordinate2DMake(stopLat!, stopLong!)
         point2.title = "Chungli"
         point2.subtitle = "Taiwan"
         myMap.addAnnotation(point2)
@@ -26,8 +35,9 @@ class MapViewController: UIViewController,MKMapViewDelegate {
         myMap.delegate = self
         
         
+        
         //Span of the map
-        myMap.setRegion(MKCoordinateRegionMake(point2.coordinate, MKCoordinateSpanMake(0.7,0.7)), animated: true)
+        myMap.setRegion(MKCoordinateRegionMake(point2.coordinate, MKCoordinateSpanMake(0.1,0.1)), animated: true)
         
         var directionsRequest = MKDirectionsRequest()
         let markTaipei = MKPlacemark(coordinate: CLLocationCoordinate2DMake(point1.coordinate.latitude, point1.coordinate.longitude), addressDictionary: nil)
@@ -50,8 +60,9 @@ class MapViewController: UIViewController,MKMapViewDelegate {
     func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
         
         var myLineRenderer = MKPolylineRenderer(polyline: myRoute?.polyline!)
-        myLineRenderer.strokeColor = UIColor.redColor()
-        myLineRenderer.lineWidth = 3
+       //  var myLineRenderer = MKPolylineRenderer(overlay: overlay)
+        myLineRenderer.strokeColor = UIColor.blueColor()
+        myLineRenderer.lineWidth = 4
         return myLineRenderer
     }
 

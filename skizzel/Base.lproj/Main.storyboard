@@ -272,7 +272,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReceiptCategoryCell" rowHeight="75" id="3cF-4Q-qWm" customClass="ReceiptCategoryCell" customModule="skizzel" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReceiptCategoryCell" rowHeight="75" id="3cF-4Q-qWm" userLabel="CategoryCell" customClass="CategoryCell" customModule="skizzel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="247" width="320" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3cF-4Q-qWm" id="Ch3-Z3-Lpw">
@@ -299,7 +299,7 @@
                                         <color key="backgroundColor" red="0.40000000000000002" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="blockImage" destination="wj4-T9-6Gb" id="5qd-rt-aao"/>
-                                            <outlet property="receiptCategory" destination="xXK-Ue-fmo" id="unA-KI-HPX"/>
+                                            <outlet property="category" destination="xXK-Ue-fmo" id="Mxg-eu-tcc"/>
                                             <segue destination="G0j-5e-nRS" kind="push" identifier="receiptOverviewSegue" id="8FY-ey-QfW"/>
                                         </connections>
                                     </tableViewCell>
@@ -675,12 +675,12 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Oxg-f3-GmH">
-                                                    <rect key="frame" x="16" y="29" width="30" height="20"/>
+                                                    <rect key="frame" x="13" y="26" width="30" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="1" green="0.83137261870000001" blue="0.26274511220000002" alpha="1" colorSpace="deviceRGB"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January 2014 (3)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aoZ-SU-ZXr">
-                                                    <rect key="frame" x="64" y="26" width="204" height="24"/>
+                                                    <rect key="frame" x="61" y="23" width="216" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
@@ -693,7 +693,7 @@
                                         <connections>
                                             <outlet property="receiptBlockImage" destination="Oxg-f3-GmH" id="ygQ-9h-sIb"/>
                                             <outlet property="receiptMonth" destination="aoZ-SU-ZXr" id="NEv-qu-Agq"/>
-                                            <segue destination="gJb-tF-BSl" kind="push" identifier="millageDetailsSegue" id="Cna-cj-69r"/>
+                                            <segue destination="Xbe-Dc-5Iu" kind="push" identifier="MillageCategoryOverviewSegue" id="r3e-Vi-8XP"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -719,6 +719,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qga-Jb-NnT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-980" y="1811"/>
+        </scene>
+        <!--Millage Category View Controller-->
+        <scene sceneID="hrU-q8-P7j">
+            <objects>
+                <viewController id="Xbe-Dc-5Iu" customClass="MillageCategoryViewController" customModule="skizzel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="031-h7-o9A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="72" sectionHeaderHeight="22" sectionFooterHeight="22" id="gDp-hh-KsM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="633"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReceiptCategoryCell" rowHeight="73" id="LYE-dB-AqQ" userLabel="CategoryCell" customClass="CategoryCell" customModule="skizzel" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="247" width="320" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LYE-dB-AqQ" id="cQu-gD-aeb">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="WbV-GF-cHy">
+                                                    <rect key="frame" x="13" y="26" width="30" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.83137261870000001" blue="0.26274511220000002" alpha="1" colorSpace="deviceRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business (3)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fWh-at-VTD">
+                                                    <rect key="frame" x="61" y="23" width="216" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="highlightedColor" red="0.40000000000000002" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-24-xxl.png" id="m2U-Z0-V29">
+                                                    <rect key="frame" x="266" y="23" width="54" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.40000000000000002" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="blockImage" destination="WbV-GF-cHy" id="246-D4-U9g"/>
+                                            <outlet property="category" destination="fWh-at-VTD" id="GfE-qj-BA9"/>
+                                            <segue destination="gJb-tF-BSl" kind="push" identifier="millageDetailsSegue" id="Oay-7I-s81"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xbe-Dc-5Iu" id="TzA-4R-5hj"/>
+                                    <outlet property="delegate" destination="Xbe-Dc-5Iu" id="GYw-PB-vZA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2dT-e3-UsW"/>
+                    <connections>
+                        <outlet property="categoryTableView" destination="gDp-hh-KsM" id="5pD-qZ-HXY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R7o-Uw-R3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1208" y="2531"/>
         </scene>
         <!--Millage Details View Controller-->
         <scene sceneID="F3Z-5i-Pdw">
@@ -804,7 +866,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VUb-30-M8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-980" y="2538"/>
+            <point key="canvasLocation" x="-744" y="2538"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="2c7-3T-B7G">
@@ -831,7 +893,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1g-6P-ssg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-544" y="2538"/>
+            <point key="canvasLocation" x="-360" y="2538"/>
         </scene>
         <!--Millage View Controller-->
         <scene sceneID="XJg-cA-pjD">

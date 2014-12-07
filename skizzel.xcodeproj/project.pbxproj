@@ -24,7 +24,7 @@
 		A307582419E57C0700780C45 /* register.png in Resources */ = {isa = PBXBuildFile; fileRef = A307582319E57C0700780C45 /* register.png */; };
 		A307582619E57FAB00780C45 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A307582519E57FAB00780C45 /* logo.png */; };
 		A308F4A81A2DBB8A003739FC /* ReceiptCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A308F4A71A2DBB8A003739FC /* ReceiptCategoryViewController.swift */; };
-		A308F4AC1A2DBC65003739FC /* ReceiptCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A308F4AB1A2DBC65003739FC /* ReceiptCategoryCell.swift */; };
+		A308F4AC1A2DBC65003739FC /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A308F4AB1A2DBC65003739FC /* CategoryCell.swift */; };
 		A308F4AE1A2DBD92003739FC /* CategoryCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A308F4AD1A2DBD92003739FC /* CategoryCountModel.swift */; };
 		A30C768819E678D500212B35 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C768719E678D500212B35 /* UserModel.swift */; };
 		A30C768B19E6AE0200212B35 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C768A19E6AE0200212B35 /* MainViewController.swift */; };
@@ -54,6 +54,7 @@
 		A3BD5A9F19FFDB4F003E9DD0 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3BD5A9D19FFDB4F003E9DD0 /* 1.png */; };
 		A3BD5AA019FFDB4F003E9DD0 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = A3BD5A9E19FFDB4F003E9DD0 /* 2.png */; };
 		A3BD5AA219FFDC91003E9DD0 /* MillageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5AA119FFDC91003E9DD0 /* MillageViewController.swift */; };
+		A3C007251A333B03009FB942 /* MillageCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C007241A333B03009FB942 /* MillageCategoryViewController.swift */; };
 		A3C1B9C11A091B1600659548 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C1B9C01A091B1600659548 /* CoreLocation.framework */; };
 		A3C49E0E19E965D100F1F2CB /* ReceiptImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C49E0D19E965D100F1F2CB /* ReceiptImageModel.swift */; };
 		A3C49E1419E96B4700F1F2CB /* ReceiptImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C49E1319E96B4700F1F2CB /* ReceiptImagesViewController.swift */; };
@@ -128,7 +129,7 @@
 		A307582319E57C0700780C45 /* register.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register.png; sourceTree = "<group>"; };
 		A307582519E57FAB00780C45 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		A308F4A71A2DBB8A003739FC /* ReceiptCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptCategoryViewController.swift; sourceTree = "<group>"; };
-		A308F4AB1A2DBC65003739FC /* ReceiptCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptCategoryCell.swift; sourceTree = "<group>"; };
+		A308F4AB1A2DBC65003739FC /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		A308F4AD1A2DBD92003739FC /* CategoryCountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCountModel.swift; sourceTree = "<group>"; };
 		A30C768719E678D500212B35 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		A30C768A19E6AE0200212B35 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +159,7 @@
 		A3BD5A9D19FFDB4F003E9DD0 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		A3BD5A9E19FFDB4F003E9DD0 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		A3BD5AA119FFDC91003E9DD0 /* MillageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MillageViewController.swift; sourceTree = "<group>"; };
+		A3C007241A333B03009FB942 /* MillageCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MillageCategoryViewController.swift; sourceTree = "<group>"; };
 		A3C1B9C01A091B1600659548 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A3C49E0D19E965D100F1F2CB /* ReceiptImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptImageModel.swift; sourceTree = "<group>"; };
 		A3C49E1319E96B4700F1F2CB /* ReceiptImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptImagesViewController.swift; sourceTree = "<group>"; };
@@ -290,7 +292,9 @@
 				A30C768E19E6B58200212B35 /* RegisterViewController.swift */,
 				A3630BCC1A21F8A300273CBE /* LandingTableViewController.swift */,
 				A37534E41A24BFB600F1F005 /* MillageMonthsViewController.swift */,
+				A3C007241A333B03009FB942 /* MillageCategoryViewController.swift */,
 				A37534E61A24C38F00F1F005 /* MillageDetailsViewController.swift */,
+				A3D6744A1A2E032D00478514 /* MapViewController.swift */,
 				A39F5D5719F9467B00A486F4 /* ReceiptMonthsViewController.swift */,
 				A308F4A71A2DBB8A003739FC /* ReceiptCategoryViewController.swift */,
 				A30C768A19E6AE0200212B35 /* MainViewController.swift */,
@@ -300,7 +304,6 @@
 				A3C6D4C619EEAF77009BAF1E /* UploadImagesViewController.swift */,
 				A3BD5AA119FFDC91003E9DD0 /* MillageViewController.swift */,
 				A3630BC81A21E95400273CBE /* MillageCategoriesPickerViewController.swift */,
-				A3D6744A1A2E032D00478514 /* MapViewController.swift */,
 				A3BD5A9319FF8BD0003E9DD0 /* SettingsViewController.swift */,
 			);
 			name = controllers;
@@ -354,7 +357,7 @@
 				A39F5D5D19F9490E00A486F4 /* MonthsTableViewCell.swift */,
 				A3630BCA1A21EA3800273CBE /* MillageCategoriesCell.swift */,
 				A373DDA21A24C8B6008B88A1 /* MillageDetailsCell.swift */,
-				A308F4AB1A2DBC65003739FC /* ReceiptCategoryCell.swift */,
+				A308F4AB1A2DBC65003739FC /* CategoryCell.swift */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -499,7 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A308F4AC1A2DBC65003739FC /* ReceiptCategoryCell.swift in Sources */,
+				A308F4AC1A2DBC65003739FC /* CategoryCell.swift in Sources */,
 				A31D9A7619EE50EB0058C6DC /* CategoriesModel.swift in Sources */,
 				A3C6D4C219EEA2B8009BAF1E /* ViewControllerUtils.swift in Sources */,
 				A3C6D4C719EEAF77009BAF1E /* UploadImagesViewController.swift in Sources */,
@@ -510,6 +513,7 @@
 				A3D6744B1A2E032D00478514 /* MapViewController.swift in Sources */,
 				A3630BCB1A21EA3800273CBE /* MillageCategoriesCell.swift in Sources */,
 				A37E86B919E6CD70004A8C0F /* MainViewTableViewCell.swift in Sources */,
+				A3C007251A333B03009FB942 /* MillageCategoryViewController.swift in Sources */,
 				A3BD5A9419FF8BD0003E9DD0 /* SettingsViewController.swift in Sources */,
 				A308F4A81A2DBB8A003739FC /* ReceiptCategoryViewController.swift in Sources */,
 				A3C49E0E19E965D100F1F2CB /* ReceiptImageModel.swift in Sources */,
